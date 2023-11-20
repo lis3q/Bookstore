@@ -1,0 +1,36 @@
+[
+    {
+        "id": "1",
+        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/metro-2033-b-iext128004727.jpg",
+        "author": "Glukhovsky Dmitry",
+        "title": "Metro 2033"
+    },
+
+    {
+        "id": "2",
+        "img": "https://cf-tk.statiki.pl/images/large/217/9788367339124.jpg",
+        "author": "Dashner James",
+        "title": "Więzień labiryntu"
+    },
+
+    {
+        "id": "3",
+        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/igrzyska-smierci-b-iext130562715.jpg",
+        "author": "Collins Suzane",
+        "title": "Igrzyska śmierci"
+    },
+
+    {
+        "id": "4",
+        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/outsider-b-iext140311959.jpg",
+        "author": "King Stephen",
+        "title": "Outsider"
+    },
+
+    {
+        "id": "5",
+        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/diuna-kroniki-diuny-tom-1-b-iext137017822.jpg",
+        "author": "Herbert Frank",
+        "title": "Diuna"
+    }
+]
