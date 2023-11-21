@@ -130,7 +130,10 @@ nav .user-menu i {
     padding: 4% 3%;
 }
 .heading {
-    font-size: 2.1em;
+    font-size: 1.7em;
+    font-weight: 500;
+    border-left: 4px solid var(--red);
+    padding-left: 10px;
 }
 .subheading {
     margin-top: 3px;
@@ -139,6 +142,7 @@ nav .user-menu i {
 }
 .content {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     margin-top: 18px;
     gap: 30px;
