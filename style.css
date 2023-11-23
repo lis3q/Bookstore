@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap'); /* Open Sans font */
 /* Main settings */
 * {
-    margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif;
+    margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; scroll-behavior: smooth;
 }
 html {
     scroll-behavior: smooth;
@@ -125,9 +125,11 @@ nav .user-menu i {
 }
 
 
-/* Recommended section */
-#recommended {
+/* Books sections */
+#recommended, #news, #dailybook {
     padding: 4% 3%;
+    position: relative;
+    z-index: 1;
 }
 .heading {
     font-size: 1.7em;
@@ -140,33 +142,36 @@ nav .user-menu i {
     color: var(--grey);
     font-size: 1.1em;
 }
-.content {
+.content .boxes {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     margin-top: 18px;
-    gap: 30px;
+    gap: 50px;
+    overflow-x: scroll;
+    transition: all .2s;
+}
+.content .boxes::-webkit-scrollbar {
+    display: none;
 }
 .content .box {
-    width: 300px;
+    min-width: 240px;
     display: flex;
-    /* align-items: center; */
     flex-direction: column;
-    cursor: pointer;
     transition: all .5s;
-    /* box-shadow: 0px 0px 18.8px 7px rgba(0, 0, 0, 0.048); */
     padding-bottom: 25px;
+    transition: all .2s;
 }
-/* .content .box:hover {
-    box-shadow: 0px 0px 18.8px 7px rgba(0, 0, 0, 0.048);
-} */
+.content .box:hover {
+    transform: translateY(-5px);
+}
 .content .box .image {
-    height: 320px;
-    width: 80%;
+    height: 340px;
+    width: 100%;
 }
 .content .box img {
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 .content .box .author {
     font-size: 1em;
@@ -206,7 +211,7 @@ nav .user-menu i {
 }
 .content .box .btn {
     margin-top: 8px;
-    width: 80%;
+    width: 100%;
 }
 .content .box .btn button {
     width: 100%;
@@ -229,9 +234,62 @@ nav .user-menu i {
 .content .box .btn button i {
     font-size: 1.2em;
 }
+.sliderbtn {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--lightblack);
+    color: var(--white);
+    position: absolute;
+    top: 42%;
+    left: 2%;
+    transform: translate(-2%, -42%);
+    cursor: pointer;
+    font-size: 1.4em;
+    opacity: 0.9;
+    transition: all .3s;
+}
+.sliderbtn:hover {
+    opacity: 1;
+}
+.sliderbtn.next {
+    position: absolute;
+    top: 42%;
+    left: 98.5%;
+    transform: translate(-98.5%, -42%);
+}
 
 
-/* News section */
-#news {
-    padding: 4% 3%;
+/* Daily book */
+.content.daily {
+    padding-top: 1%;
+}
+.content.daily .box {
+    flex-direction: row;
+    width: 800px;
+    height: 600px;
+}
+.content.daily .box .info {
+    margin-left: 50px;
+    width: 100%;
+}
+.content.daily .box .title {
+    font-size: 2.5em;
+}
+.content.daily .box .author {
+    font-size: 1.3em;
+}
+.content.daily .box p {
+    margin: 25px 0 25px 0;
+    border-top: 0.1px solid var(--grey);
+    border-bottom: 0.1px solid var(--grey);
+    padding: 20px 0;
+    text-align: justify;
+    color: var(--lightblack);
+}
+.content.daily .image {
+    height: 100%;
+    width: 100%;
 }
