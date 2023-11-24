@@ -126,7 +126,7 @@ nav .user-menu i {
 
 
 /* Books sections */
-#recommended, #news, #dailybook {
+#recommended, #news, #dailybook, #categories {
     padding: 4% 3%;
     position: relative;
     z-index: 1;
@@ -146,8 +146,6 @@ nav .user-menu i {
     display: flex;
     align-items: center;
     margin-top: 18px;
-    gap: 50px;
-    overflow-x: scroll;
     transition: all .2s;
 }
 .content .boxes::-webkit-scrollbar {
@@ -234,32 +232,18 @@ nav .user-menu i {
 .content .box .btn button i {
     font-size: 1.2em;
 }
-.sliderbtn {
-    width: 46px;
-    height: 46px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--lightblack);
-    color: var(--white);
-    position: absolute;
-    top: 42%;
-    left: 2%;
-    transform: translate(-2%, -42%);
-    cursor: pointer;
-    font-size: 1.4em;
-    opacity: 0.9;
-    transition: all .3s;
+
+/* Slider buttons */
+.swiper-button-prev,
+.swiper-button-next {
+    background: var(--red);
+    padding: 30px;
+    transform: translateY(-30px) !important;
+    color: var(--white) !important;
+    font-size: 0.2em !important;
+    /* opacity: 0 !important; */
 }
-.sliderbtn:hover {
-    opacity: 1;
-}
-.sliderbtn.next {
-    position: absolute;
-    top: 42%;
-    left: 98.5%;
-    transform: translate(-98.5%, -42%);
-}
+
 
 
 /* Daily book */
@@ -292,4 +276,31 @@ nav .user-menu i {
 .content.daily .image {
     height: 100%;
     width: 100%;
+}
+.content.daily .box:hover {
+    transform: translateY(0);
+}
+
+
+/* Categories section */
+.categories-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+    gap: 45px;
+}
+.categories-content .category {
+    padding: 1% 2%;
+    color: var(--black);
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all .4s;
+    border-radius: 5px;
+}
+.categories-content .category:hover {
+    background: var(--red);
+    color: var(--white);
+    transform: translateY(-3px);
 }

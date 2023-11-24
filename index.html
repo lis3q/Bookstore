@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <title>Bookstore.pl</title>
 </head>
 <body>
@@ -52,37 +53,60 @@
         <div class="background"><h1><span>Świat</span> pełen słów - Twój sklep <span>książkowy</span> online!<br>Odkryj, czytaj, inspiruj się!</h1></div>
     </section>
 
+
     <!-- Recommended section -->
     <section id="recommended">
         <h2 class="heading">Polecane książki</h2>
-        <div class="content">
-            <div class="boxes"></div>
-            <div class="sliderbtn pre"><i class="fa-solid fa-arrow-left"></i></div>
-            <div class="sliderbtn next"><i class="fa-solid fa-arrow-right"></i></div>
+
+        <div class="swiper content">
+            <div class="swiper-wrapper boxes"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </section>
-
 
     <!-- News section -->
     <section id="news">
-        <h2 class="heading">Polecane książki</h2>
+        <h2 class="heading">Nowości</h2>
         <p class="subheading">Zobacz, co pojawiło się w naszym sklepie</p>
-        <div class="content">
-            <div class="boxes"></div>
-            <div class="sliderbtn pre"><i class="fa-solid fa-arrow-left"></i></div>
-            <div class="sliderbtn next"><i class="fa-solid fa-arrow-right"></i></div>
+
+        <div class="content swiper">
+            <div class="boxes swiper-wrapper"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </section>
 
+    <!-- Dailybook section -->
     <section id="dailybook">
         <h2 class="heading">Książka dnia</h2>
         <p class="subheading">Zobacz dzisiejszą książke dnia w naszym sklepie</p>
 
-        <div class="content daily">
+        <div class="content daily"></div>
+    </section>
 
+    <!-- Categories -->
+    <section id="categories">
+        <h2 class="heading">Kategorie</h2>
+        <p class="subheading">Zobacz jakie mamy kategorie książek</p>
+
+        <div class="categories-content">
+            <div class="category">Science fiction</div>
+            <div class="category">Kryminał</div>
+            <div class="category">Fantasy</div>
+            <div class="category">Dla dzieci</div>
+            <div class="category">Dla młodzieży</div>
+            <div class="category">Komiks</div>
+            <div class="category">Biografie</div>
+            <div class="category">Biznes</div>
+            <div class="category">Turystyka i podróże</div>
+            <div class="category">Poradniki</div>
+            <div class="category">Sztuka</div>
+            <div class="category">Rozwój osobisty</div>
         </div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

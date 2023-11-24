@@ -7,7 +7,7 @@ fetch("recommended.json").then(function(response){
 	let out = "";
 	for(let product of products){
 		out += `
-            <div class="box">
+            <div class="swiper-slide box">
                 <div class="image"><img src="${product.img}" alt="${product.author}/${product.title}"></div>
                 <div class="title">${product.title}</div>
                 <div class="author">${product.author}</div>
@@ -31,7 +31,7 @@ fetch("news.json").then(function(response){
 	let out = "";
 	for(let product of products){
 		out += `
-            <div class="box">
+            <div class="box swiper-slide">
                 <div class="image"><img src="${product.img}" alt="${product.author}/${product.title}"></div>
                 <div class="title">${product.title}</div>
                 <div class="author">${product.author}</div>
@@ -55,7 +55,7 @@ fetch("dailybook.json").then(function(response){
 	let out = "";
 	for(let product of products){
 		out += `
-            <div class="box">
+            <div class="box swiper-slide">
                 <div class="image"><img src="${product.img}" alt="${product.author}/${product.title}"></div>
                 <div class="info">
                     <div class="title">${product.title}</div>
@@ -76,25 +76,22 @@ fetch("dailybook.json").then(function(response){
 
 
 
-
-// Books slider
-// function scroll_l() {
-//     let left = document.querySelector(".boxes");
-//     left.scrollBy(-600, 0);
-// }
-
-// function scroll_r() {
-//     let right = document.querySelector(".boxes");
-//     right.scrollBy(600, 0);
-// }
-
-let boxes = document.querySelector(".content .boxes");
-let prevBtn = document.querySelector(".sliderbtn.pre")
-let nextBtn = document.querySelector(".sliderbtn.next")
-
-prevBtn.addEventListener("click", () => {
-    boxes.scrollBy(-600, 0);
-})
-nextBtn.addEventListener("click", () => {
-    boxes.scrollBy(600, 0);
-})
+// SwiperJS
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    slidesPerView: 7.5,
+    speed: 200,
+    loop: false,
+    spaceBetween: 25,
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+      },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+      clickable: true,
+    },
+  });
