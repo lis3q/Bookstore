@@ -1,5 +1,5 @@
 // Displaying recommended books from a JSON file
-fetch("recommended.json").then(function(response){
+fetch("json/recommended.json").then(function(response){
 	return response.json();
 })
 .then(function(products){
@@ -23,7 +23,7 @@ fetch("recommended.json").then(function(response){
 });
 
 // Displaying new books from a JSON file
-fetch("news.json").then(function(response){
+fetch("json/news.json").then(function(response){
 	return response.json();
 })
 .then(function(products){
@@ -47,7 +47,7 @@ fetch("news.json").then(function(response){
 });
 
 // Displaying daily book from a JSON file
-fetch("dailybook.json").then(function(response){
+fetch("json/dailybook.json").then(function(response){
 	return response.json();
 })
 .then(function(products){
@@ -76,12 +76,12 @@ fetch("dailybook.json").then(function(response){
 
 
 
-// SwiperJS
-const swiper = new Swiper('.swiper', {
+// SwiperJS books
+const books = new Swiper('.swiper', {
     // Optional parameters
     slidesPerView: 7.5,
     speed: 200,
-    loop: false,
+    loop: true,
     spaceBetween: 25,
     keyboard: {
         enabled: true,
@@ -92,6 +92,31 @@ const swiper = new Swiper('.swiper', {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
+      clickable: true,
+    },
+  });
+
+  // SwiperJS offers banner
+  const offers_slider = new Swiper('.offers-slider', {
+    // Optional parameters
+    slidesPerView: 1,
+    speed: 300,
+    loop: true,
+    spaceBetween: 0,
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+      },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+      clickable: true,
+    },
+
+    pagination: {
+      el: '.swiper-pagination',
       clickable: true,
     },
   });

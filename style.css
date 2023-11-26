@@ -49,6 +49,7 @@ nav .search-bar input[type="text"] {
     outline: none;
     border-radius: 3px 0 0 3px;
     transition: all .3s;
+    font-weight: 500;
 }
 nav .search-bar input[type="text"]:focus {
     box-shadow: 0 0 7px 2px #ffffff69;
@@ -62,6 +63,7 @@ nav .search-bar select {
     width: 200px;
     appearance: none;
     padding: 0 15px;
+    font-weight: 500;
 }
 nav .search-bar input[type="submit"] {
     height: 50px;
@@ -73,6 +75,7 @@ nav .search-bar input[type="submit"] {
     margin-left: -5px;
     cursor: pointer;
     border-radius: 0 3px 3px 0;
+    font-weight: 500;
 }
 
 nav .user-menu {
@@ -103,25 +106,17 @@ nav .user-menu i {
 }
 
 
-/* Background section */
-.background {
+/* Offers section */
+.offers-slider {
     height: 60vh;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(background.jpg);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    background: #2e2e2e;
+    margin-top: 5.6%;
 }
-.background h1 {
-    color: var(--white);
-    font-size: 2.4em;
-    line-height: 160%;
-    margin-top: 4%;
-}
-.background span {
-    color: var(--red);
+.offers-slider .offer {
+   height: 60vh;
+   background: url(offers/offer2.png);
+   background-position: center;
+   background-size: contain;
 }
 
 
@@ -170,17 +165,26 @@ nav .user-menu i {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    cursor: pointer;
 }
 .content .box .author {
     font-size: 1em;
     color: var(--lightblack);
     font-weight: 200;
     margin-top: 7px;
+    cursor: pointer;
+    transition: all .3s;
 }
 .content .box .title {
     margin-top: 8px;
     font-size: 1.8em;
     font-weight: 500;
+    cursor: pointer;
+    transition: all .3s;
+}
+.content .box .author:hover,
+.content .box .title:hover {
+    color: var(--red);
 }
 .content .box .price {
     margin: 16px 0 5px 0;
@@ -248,7 +252,10 @@ nav .user-menu i {
 
 /* Daily book */
 .content.daily {
-    padding-top: 1%;
+    margin-top: 1%;
+    padding: 4%;
+    background: var(--black);
+    border-radius: 15px;
 }
 .content.daily .box {
     flex-direction: row;
@@ -258,12 +265,17 @@ nav .user-menu i {
 .content.daily .box .info {
     margin-left: 50px;
     width: 100%;
+    color: var(--white);
 }
 .content.daily .box .title {
     font-size: 2.5em;
 }
 .content.daily .box .author {
     font-size: 1.3em;
+    color: var(--grey);
+}
+.content.daily .box .price span {
+    color: var(--white);
 }
 .content.daily .box p {
     margin: 25px 0 25px 0;
@@ -271,7 +283,7 @@ nav .user-menu i {
     border-bottom: 0.1px solid var(--grey);
     padding: 20px 0;
     text-align: justify;
-    color: var(--lightblack);
+    color: var(--grey);
 }
 .content.daily .image {
     height: 100%;
@@ -288,19 +300,35 @@ nav .user-menu i {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-top: 3%;
     gap: 45px;
+    padding: 5% 0;
 }
 .categories-content .category {
-    padding: 1% 2%;
-    color: var(--black);
+    min-width: 200px;
+    min-height: 200px;
+    text-align: center;
     font-size: 1.2em;
     cursor: pointer;
     transition: all .4s;
     border-radius: 5px;
+    background: var(--black);
+}
+.categories-content .category h3 {
+    color: var(--white);
+    background: var(--red);
+    border-radius: 5px;
+    padding: 5% 0;
+    margin-bottom: 25px;
+}
+.categories-content .category p {
+    margin-top: 5px;
+    color: var(--white);
+    font-weight: 200;
+}
+.categories-content .category p span {
+    color: var(--grey);
 }
 .categories-content .category:hover {
-    background: var(--red);
-    color: var(--white);
     transform: translateY(-3px);
+    box-shadow: 0 0 15px 6px rgba(0, 0, 0, 0.295);
 }
