@@ -11,10 +11,9 @@
 <body>
 
     <!-- Home section -->
-    <section id="home">
         <div class="navbar">
             <header>
-                <div class="logo"><a href="#home">LOGO</a></div>
+                <div class="logo"><a href="#home"><img src="img/logo.png" alt="logo" height="70px"></a></div>
                 <div class="links">
                     <a href="#home" class="active">Home</a>
                     <a href="#">About</a>
@@ -26,7 +25,7 @@
                 <div class="category-menu">
                     <a href="#categories">Kategorie</a>
                     <a href="#recommended">Polecane</a>
-                    <a href="#">Promocje</a>
+                    <a href="#sale">Promocje</a>
                     <a href="#news">Nowości</a>
                 </div>
                 <div class="account-menu">
@@ -44,7 +43,6 @@
             </div>
             <div class="search-bar"><input type="text" placeholder="Książka, autor, kategoria"><i class="fa-solid fa-magnifying-glass"></i></div>
         </div>
-    </section>
 
 
     <!-- Recommended section -->
@@ -58,34 +56,150 @@
         </div>
     </section>
 
+    <section id="tiles">
+        <h2 class="heading">To się czyta</h2>
+        <p class="subheading">Zobacz, co użytkownicy najczęściej czytają</p>
+        <hr class="line">
+
+        <div class="tiles-content">
+            <div class="tile">
+                <div class="image"><img src="https://s.lubimyczytac.pl/upload/books/5005000/5005282/976710-352x500.jpg" alt=""></div>
+                <div class="title">Literatura obyczajowa</div>
+            </div>
+            <div class="tile">
+                <div class="image"><img src="https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/milczenie-lasu-b-iext131999453.jpg" alt=""></div>
+                <div class="title">Fantastyka, horror</div>
+            </div>
+            <div class="tile">
+                <div class="image"><img src="https://s.lubimyczytac.pl/upload/books/5090000/5090283/1111690-352x500.jpg" alt=""></div>
+                <div class="title">Kryminał, thriller</div>
+            </div>
+            <div class="tile">
+                <div class="image"><img src="https://s.lubimyczytac.pl/upload/books/294000/294899/556278-352x500.jpg" alt=""></div>
+                <div class="title">Biografie</div>
+            </div>
+        </div>
+    </section>
+
     <!-- News section -->
     <section id="news">
         <h2 class="heading">Nowości</h2>
         <p class="subheading">Zobacz, co pojawiło się w naszym sklepie</p>
         <hr class="line">
 
-        <div class="content swiper">
-            <div class="boxes swiper-wrapper"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+        <div class="content">
+            <div class="boxes"></div>
         </div>
-    </section>
-
-    <!-- Dailybook section -->
-    <section id="dailybook">
-        <h2 class="heading">Książka dnia</h2>
-        <p class="subheading">Zobacz dzisiejszą książke dnia w naszym sklepie</p>
-        <hr class="line">
-
-        <div class="content daily"></div>
     </section>
 
     <!-- Categories -->
     <section id="categories">
         <h2 class="heading">Kategorie</h2>
-        <p class="subheading">Zobacz jakie mamy kategorie książek</p>
+        <p class="subheading">Zobacz na jakie kategorie dzielą się nasze książki</p>
         <hr class="line">
+
+        <div class="categories-content">
+            <div class="category">Science fiction</div>
+            <div class="category">Kryminał</div>
+            <div class="category">Fantasy</div>
+            <div class="category">Dla dzieci</div>
+            <div class="category">Komiks</div>
+            <div class="category">Dla młodzieży</div>
+            <div class="category">Turystyka i podróże</div>
+            <div class="category">Biografie</div>
+            <div class="category">Biznes/ekonomia</div>
+        </div>
     </section>
+
+    <!-- Sale section -->
+    <section id="sale">
+        <h2 class="heading">Promocje</h2>
+        <p class="subheading">Zobacz, jakie książki są aktualnie na promocji</p>
+        <hr class="line">
+
+        <div class="content">
+            <div class="boxes"></div>
+        </div>
+    </section>
+
+    <section id="banner">
+        <h3>Mega discounts</h3>
+        <h1>Up to <span>70% Off</span> for all books</h1>
+        <a href="#" class="banner-btn">Explore more</a>
+    </section>
+
+    <!-- Top artists section -->
+    <section id="artists">
+        <h2 class="heading">Najwyżej oceniani pisarze</h2>
+        <p class="subheading">Zobacz, jakich pisarzy najczęściej wybierają ludzie</p>
+        <hr class="line">
+
+        <div class="artists-content">
+            <div class="artist-box">
+                <div class="image"><img src="https://s.lubimyczytac.pl/upload/texts/16300/16359/16359_1632232757_grafika800x600.jpg" alt="stephenKing-photo"></div>
+                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <div class="artist-name">Stephen King</div>
+                <a href="#" class="artist-btn">More</a>
+            </div>
+            <div class="artist-box">
+                <div class="image"><img src="https://www.sperling.it/content/uploads/2017/10/13379-201-2016-nicholas-sparks-Styron-Photo-7231-LR.jpeg" alt="stephenKing-photo"></div>
+                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <div class="artist-name">Nicholas Sparks</div>
+                <a href="#" class="artist-btn">More</a>
+            </div>
+            <div class="artist-box">
+                <div class="image"><img src="https://bi.im-g.pl/im/f3/62/1a/z27664627AMP,JK-Rowling--Ukazuje-sie-jej-nowa-ksiazka--Gwiazdko.jpg" alt="stephenKing-photo"></div>
+                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <div class="artist-name">J.K Rowling</div>
+                <a href="#" class="artist-btn">More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter section -->
+    <section id="newsletter">
+        <h2>Newsletter</h2>
+        <p>Nie przegap żadnej promocji, zdobywaj dodatkowe rabaty</p>
+        <div class="input"><input type="text" placeholder="E-mail"><input type="submit" value="Sign Up"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo"><img src="img/logo.png" alt="logo" height="140px"></div>
+        <div class="footer-content">
+            <div class="col">
+                <h2>Contact</h2>
+                <p>2311 Waterview Lane, New Mexico, 88005</p>
+                <p>+1 505-646-3002</p>
+                <p>10:00 - 22:00, Mon - Sat</p>
+                <br>
+                <h2 style="text-decoration: none;">Follow Us</h2>
+                <div class="media-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="col">
+                <h2>About</h2>
+                <a href="#">About Us</a>
+                <a href="#">Delivery Information</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="col">
+                <h2>My Account</h2>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">My Wishlist</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+        </div>
+
+    </footer>
 
     <script src="script.js"></script>
 </body>
