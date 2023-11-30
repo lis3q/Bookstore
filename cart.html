@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Twój koszyk | Bookstore.pl</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <header>
+            <div class="logo"><a href="#home"><img src="img/logo.png" alt="logo" height="70px"></a></div>
+            <div class="links">
+                <a href="index.html" class="active">Home</a>
+                <a href="#">About</a>
+                <a href="#">Books</a>
+                <a href="#">Contact</a>
+            </div>
+        </header>
+        <nav>
+            <div class="category-menu">
+                <a href="#categories">Kategorie</a>
+                <a href="#recommended">Polecane</a>
+                <a href="#sale">Promocje</a>
+                <a href="#news">Nowości</a>
+            </div>
+            <div class="account-menu">
+                <a href="#">Zaloguj się</a>
+                <a href="#">Ulubione</a>
+                <a href="cart.html">Koszyk</a> 
+            </div>
+        </nav>
+    </div>
+
+    <!-- Cart section -->
+    <div class="cart">
+        <div class="items">
+            <div class="cart-heading">
+                <h1>Koszyk <span>(2)</span></h1>
+                <div class="clear-cart"><i class="fa-solid fa-trash"></i> Clear all cart</div>
+            </div>
+            <div class="item">
+                <img src="https://cf-tk.statiki.pl/images/large/217/9788367339124.jpg" alt="" height="250px" class="image">
+                <div class="book-info">
+                    <div class="title">Więzień labiryntu</div>
+                    <div class="author">Dashner James</div>
+                    <div class="category">Fantasy</div>
+                    <div class="quantity">
+                        <div class="minus">-</div>
+                        <div class="number">1</div>
+                        <div class="plus">+</div>
+                    </div>
+                    <div class="buttons">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                </div>
+                <div class="options">
+                    <div class="price">24.90 zł</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-info">
+            <div class="total-price">
+                <h2>Łączna kwota</h2>
+                <p>24.90 zł</p>
+            </div>
+            <div class="disc-code">
+                <h3>Posiadasz kod rabatowy?</h3>
+                <input type="text" placeholder="Wpisz kod rabatowy"><button>Aktywuj</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

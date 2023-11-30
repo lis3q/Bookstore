@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap'); /* Open Sans font */
+/* Main settings */
+* {
+    margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; scroll-behavior: smooth;
+}
+
+/* Cart */
+.cart {
+    margin-top: 15%;
+    padding: 0 3%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Cart items */
+.cart .items {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 25px;
+    width: 60%;
+    box-shadow: 0 0 19px 2px #0000001c;
+    padding: 20px;
+}
+.cart .items .cart-heading {
+    display: flex;
+    gap: 37%;
+    align-items: center;
+}
+.items .cart-heading .clear-cart {
+    font-size: 1.1em;
+    color: #2e2e2e;
+    padding: 10px 25px;
+    transition: .3s ease;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.items .cart-heading .clear-cart:hover {
+    background: rgba(204, 204, 204, 0.185);
+}
+.cart .items h1 span {
+    color: #5e5e5e;
+}
+
+/* Cart item */
+.cart .item h1{
+    color: #1f1f1f;
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.cart .item {
+    display: flex;
+    align-items: center;
+    width: 67%;
+    border-top: 1px solid #ccc;
+    padding: 25px 0;
+}
+.cart .item .book-info {
+    margin: 0 16px;
+}
+.cart .item .book-info .title {
+    font-weight: 600;
+    font-size: 1.4em;
+}
+.cart .item .book-info .author {
+    margin-top: 3px;
+    color: #474747;
+    font-size: 1.2em;
+}
+.cart .item .book-info .category {
+    margin-top: 8px;
+    color: #858585;
+    font-size: 0.9em;
+}
+
+.cart .item .options {
+    margin-left: 20%;
+    display: flex;
+    align-items: center;
+}
+.cart .item .options .price {
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 1.5em;
+    color: #FE5A5A;
+}
+.cart .item .book-info .quantity {
+    display: flex;
+    margin-top: 25px;
+    align-items: center;
+}
+.cart .item .book-info .quantity .minus,
+.cart .item .book-info .quantity .plus {
+    padding: 10px 12px;
+    cursor: pointer;
+    background: #e7e7e7;
+}
+.cart .item .book-info .quantity .number {
+    padding: 10px 18px;
+    background: #f0f0f0;;
+}
+.cart .item .book-info .buttons {
+    margin-top: 18px;
+}
+.cart .item .book-info .buttons i {
+    font-size: 1.1em;
+    margin-right: 6px;
+    cursor: pointer;
+    transition: .3s ease;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #9C60FF;
+}
+
+
+/* Cart info */
