@@ -13,7 +13,7 @@
     <!-- Navbar -->
     <div class="navbar">
         <header>
-            <div class="logo"><a href="#home"><img src="img/logo.png" alt="logo" height="70px"></a></div>
+            <div class="logo"><a href="index.html"><img src="img/logo.png" alt="logo" height="70px"></a></div>
             <div class="links">
                 <a href="index.html" class="active">Home</a>
                 <a href="#">About</a>
@@ -38,44 +38,68 @@
 
     <!-- Cart section -->
     <div class="cart">
+
+        <!-- All items -->
         <div class="items">
             <div class="cart-heading">
-                <h1>Koszyk <span>(2)</span></h1>
+                <h1>Koszyk <span>(1)</span></h1>
                 <div class="clear-cart"><i class="fa-solid fa-trash"></i> Clear all cart</div>
             </div>
+            
+            <!-- Item -->
             <div class="item">
                 <img src="https://cf-tk.statiki.pl/images/large/217/9788367339124.jpg" alt="" height="250px" class="image">
-                <div class="book-info">
-                    <div class="title">Więzień labiryntu</div>
-                    <div class="author">Dashner James</div>
-                    <div class="category">Fantasy</div>
-                    <div class="quantity">
-                        <div class="minus">-</div>
-                        <div class="number">1</div>
-                        <div class="plus">+</div>
+                <div class="item-info">
+                    <div class="book-info">
+                        <div class="title">Więzień labiryntu</div>
+                        <div class="author">Dashner James | <span class="category">Fantasy</span></div>
+                        <div class="price">24.90 zł</div>
+                        <div class="delivery">Dostawa od 9,99 zł</div>
                     </div>
-                    <div class="buttons">
-                        <i class="fa-solid fa-heart"></i>
-                        <i class="fa-solid fa-trash"></i>
+                    <div class="options">
+                        <div class="quantity">
+                            <div class="minus">-</div>
+                            <div class="number">2</div>
+                            <div class="plus">+</div>
+                        </div>
+                        <div class="buttons">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </div>
                     </div>
-                </div>
-                <div class="options">
-                    <div class="price">24.90 zł</div>
                 </div>
             </div>
+
         </div>
 
+        <!-- Cart info, delivery -->
         <div class="cart-info">
-            <div class="total-price">
+            <div class="price row">
                 <h2>Łączna kwota</h2>
-                <p>24.90 zł</p>
+                <p>24,90 zł</p>
             </div>
+            <div class="delivery-price row">
+                <h2>Dostawa od</h2>
+                <p>9,99 zł</p>
+            </div>
+            <hr>
+            <div class="total-price row">
+                <h2>Razem z dostawą</h2>
+                <p class="total-price-heading">32,78 zł</p>
+            </div>
+            <div class="buttons">
+                <button class="btn-1">Dostawa i płatność</button><br>
+                <button class="btn-2">Kontynuuj zakupy</button>
+            </div>
+            <hr>
             <div class="disc-code">
                 <h3>Posiadasz kod rabatowy?</h3>
-                <input type="text" placeholder="Wpisz kod rabatowy"><button>Aktywuj</button>
+                <input type="text" placeholder="Wpisz kod rabatowy"><button class="btn-3">Aktywuj</button>
             </div>
         </div>
 
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
