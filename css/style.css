@@ -54,7 +54,8 @@ header .links a {
     position: relative;
     transition: .3s ease;
 }
-header .links a.active {
+header .links a.active,
+.navbar nav a.active {
     color: #FE5A5A;
 }
 header .links a.active::after {
@@ -70,8 +71,30 @@ header .links a.active::after {
 header .links a:hover {
     color: #FE5A5A;
 }
+header .search-bar {
+    width: 30%;
+    display: flex;
+    margin-left: 10%;
+}
+header .search-bar input {
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 44px;
+    padding: 10px;
+    background: #333333;
+    border: 1px solid #4d4d4d;
+    color: #fff;
+    font-size: 1em;
+}
+header .search-bar i {
+    margin-left: -34px;
+    line-height: 44px;
+    font-size: 1.1em;
+    color: #fff;
+}
 
-
+/* Nav */
 nav {
     height: 90px;
     background: #232323;
@@ -101,56 +124,14 @@ nav .account-menu a:hover {
     color: #FE5A5A;
 }
 
-
 nav.sticky {
     height: 60px;
 }
 
-
-
-/* Search engine */
-.search-container {
-    background: linear-gradient(180deg, #FE5A5A 99.99%, #FFBABA 100%);
-    height: 15vh;
-    padding: 0 3%;
-    margin: 16% 3% 5% 3%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.205);
-}
-.search-container h3 {
-    font-weight: 500;
-    font-size: 1.7em;
-}
-.search-container h3 span {
-    font-weight: 700;
-}
-.search-container p {
-    margin-top: 7px;
-}
-.search-container input {
-    height: 64px;
-    width: 600px;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.28);
-    padding: 0 14px;
-    font-size: 1.1em;
-    color: #fff;
-}
-.search-container input::placeholder {
-    color: #fff;
-}
-.search-container i {
-    margin-left: -7%;
-    font-size: 1.4em;
-}
-
 /* Books sections */
+#recommended {
+    margin-top: 12%;
+}
 .heading {
     font-size: 2.2em;
     font-weight: 500;
