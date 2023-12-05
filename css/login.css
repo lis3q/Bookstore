@@ -40,12 +40,7 @@ body {
 .form input[type="email"]:focus,
 .form input[type="password"]:focus,
 .form input[type="text"]:focus {
-    box-shadow: 0 0 14px 2px #0000002d;
-}
-.form input[type="email"]::placeholder,
-.form input[type="password"]::placeholder,
-.form input[type="text"]::placeholder {
-    color: #1f1f1f;
+    box-shadow: 0 0 14px 2px #0000001f;
 }
 
 
