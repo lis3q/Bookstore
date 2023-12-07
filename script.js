@@ -114,3 +114,20 @@ window.addEventListener("scroll", () => {
 })
 
 
+// About Us - Swiper
+const swiper = new Swiper('.swiper', {
+  slidesPerView: 3.09,
+  slidesPerGroup: 3,
+  spaceBetween: 50,
+  fade: 'true',
+  centerSlide: 'true',
+  direction: 'horizontal',
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+
