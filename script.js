@@ -3,11 +3,11 @@ fetch("json/recommended.json").then(function(response){
 	return response.json();
 })
 .then(function(products){
-	let book = document.querySelector("#recommended .boxes");
+	let book = document.querySelector("#recommended .swiper-wrapper");
 	let out = "";
 	for(let product of products){
 		out += `
-            <div class="swiper-slide box">
+            <div class="box swiper-slide">
               <div class="image">
                   <img src="${product.img}" alt="${product.author}/${product.title}">
                   <div class="fav-btn"><i class="fa-solid fa-heart-circle-plus"></i></div>
@@ -30,7 +30,7 @@ fetch("json/news.json").then(function(response){
 	return response.json();
 })
 .then(function(products){
-	let book = document.querySelector("#news .boxes");
+	let book = document.querySelector("#news .swiper-wrapper");
 	let out = "";
 	for(let product of products){
 		out += `
@@ -56,7 +56,7 @@ fetch("json/sale.json").then(function(response){
 	return response.json();
 })
 .then(function(products){
-	let book = document.querySelector("#sale .boxes");
+	let book = document.querySelector("#sale .swiper-wrapper");
 	let out = "";
 	for(let product of products){
 		out += `
@@ -115,10 +115,12 @@ window.addEventListener("scroll", () => {
 
 
 // About Us - Swiper
-const swiper = new Swiper('.swiper', {
-  slidesPerView: 3.09,
-  slidesPerGroup: 3,
-  spaceBetween: 50,
+const about = new Swiper('.reviews-swiper', {
+  slidesPerView: 3,
+  slidesPerGroup: 1,
+  loop: true,
+  grabCursor: 'true',
+  spaceBetween: 30,
   fade: 'true',
   centerSlide: 'true',
   direction: 'horizontal',
@@ -130,4 +132,29 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
+
+// Books - Swiper
+const books = new Swiper('.book-swiper', {
+  slidesPerView: 6,
+  grabCursor: 'true',
+  spaceBetween: 20,
+  fade: 'true',
+  centerSlide: 'true',
+  direction: 'horizontal',
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  breakpoints: {
+    600: {
+      slidesPerView: 6,
+    },
+    0: {
+      slidesPerView: 1
+    }
+  }
+});
 

@@ -5,8 +5,7 @@
         "author": "Glukhovsky Dmitry",
         "title": "Metro 2033",
         "price": "39.99 zł",
-        "discount": "49.99 zł",
-        "rating": "<i class='fa-solid fa-star'></i><i class='fa-solid fa-star'></i><i class='fa-solid fa-star'></i><i class='fa-solid fa-star'></i><i class='fa-solid fa-star'></i>"
+        "discount": "49.99 zł"
     },
 
     {
@@ -15,8 +14,7 @@
         "author": "Dashner James",
         "title": "Więzień labiryntu",
         "price": "22.99 zł",
-        "discount": "",
-        "rating": "<i class='fa-solid fa-star'></i><i class='fa-solid fa-star'></i><i class='fa-solid fa-star'></i><i class='fa-solid fa-star'></i><i class='fa-solid fa-star'></i>"
+        "discount": ""
     },
 
     {

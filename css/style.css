@@ -21,6 +21,30 @@ section {
     position: relative;
     z-index: 1;
 }
+/* Swiper buttons */
+.swiperBtn {
+    height: 50px !important;
+    width: 50px !important;
+    background: #ffffffe7;
+    border-radius: 50%;
+    transform: translateY(20px);
+    margin: 0 15px;
+    transition: .3s ease;
+}
+.swiper-button-next {
+    margin: 0 15px;
+}
+.swiperBtn:hover {
+    background: #ffffff;
+}
+.swiperBtn i {
+    font-size: 1.5em !important;
+    color: #232323 !important;
+}
+.swiperBtn::after,
+.swiperBtn::before {
+    content: '' !important;
+}
 
 
 /* Navbar */
@@ -128,6 +152,7 @@ nav.sticky {
     height: 60px;
 }
 
+
 /* Books sections */
 #recommended {
     margin-top: 12%;
@@ -148,19 +173,10 @@ nav.sticky {
     margin: 15px auto;
     border: 1px solid #FE5A5A;
 }
-.content .boxes {
-    display: flex;
-    align-items: center;
-    margin-top: 18px;
-    transition: all .2s;
+.swiper-wrapper {
     padding: 2% 0;
-    overflow-x: scroll;
-}
-.content .boxes::-webkit-scrollbar {
-    display: none;
 }
 .content .box {
-    min-width: 280px;
     display: flex;
     flex-direction: column;
     transition: all .5s;
@@ -169,7 +185,6 @@ nav.sticky {
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.068);
     padding: 14px;
     border-radius: 5px;
-    margin: 0 14px;
 }
 .content .box:hover {
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.137);

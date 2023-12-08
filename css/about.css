@@ -120,22 +120,18 @@ body {
 
 /* Customer reviews */
 .reviews {
-    margin: 8% 3%;
+    margin: 2% 3% 4% 3%;
 }
-.reviews-container {
-    display: flex;
+.swiper-container {
     background: #FE5A5A;
-    margin-top: 3%;
+    padding: 4% 3%;
+    margin-top: 2%;
 }
-.swiper {
-    width: 90%;
-}
-.swiper-wrapper {
-    padding: 12% 2% 5% 2%;
-}
+
+
+/* Review card */
 .review {
-    width: 480px !important;
-    height: 360px !important;
+    padding: 3% 0;
     background: #fff;
     display: flex;
     text-align: center;
@@ -144,7 +140,7 @@ body {
     justify-content: center;
 }
 .review .image {
-    margin-top: -25%;
+    margin-top: -5%;
 }
 .review .image img {
     height: 140px;
@@ -173,4 +169,25 @@ body {
     color: #ffc400;
     font-size: 1.3em;
     margin: 0 2px;
+}
+
+/* Swiper buttons */
+.swiperBtn {
+    height: 50px !important;
+    width: 50px !important;
+    background: #232323d5;
+    border-radius: 50%;
+    transform: translateY(30px);
+    margin: 0 5px;
+}
+.swiperBtn:hover {
+    background: #232323;
+}
+.swiperBtn i {
+    font-size: 1.3em !important;
+    color: #fff !important;
+}
+.swiperBtn::after,
+.swiperBtn::before {
+    content: '' !important;
 }
