@@ -10,8 +10,35 @@
     <title>Bookstore.pl</title>
 </head>
 <body>
-
-    <!-- Home section, navbar -->
+    <!-- Mobile header -->
+    <header class="mobile">
+        <div class="logo">
+            <a href="index.html">LOGO.</a>
+            <i class="fa-solid fa-xmark close-mobile-nav"></i>
+        </div>
+        <div class="links">
+            <p>Linki</p>
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="books.html">Books</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="category-menu">
+            <p>Sekcje</p>
+            <a href="#categories">Kategorie</a>
+            <a href="#recommended">Polecane</a>
+            <a href="#sale">Promocje</a>
+            <a href="#news">Nowości</a>
+        </div>
+        <div class="account-menu">
+            <p>Konto</p>
+            <a href="login.html">Zaloguj się</a>
+            <a href="favs.html">Ulubione</a>
+            <a href="cart.html">Koszyk</a> 
+        </div>
+    </header>
+    
+    <!-- Desktop header, nav -->
     <div class="navbar">
         <header>
             <div class="logo"><a href="index.html">LOGO.</a></div>
@@ -22,6 +49,7 @@
                 <a href="books.html">Books</a>
                 <a href="contact.html">Contact</a>
             </div>
+            <div class="hamburger"><i class="fas fa-bars open-mobile-nav"></i></div>
         </header>
         <nav>
             <div class="category-menu">

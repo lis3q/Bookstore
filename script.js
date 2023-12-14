@@ -16,7 +16,7 @@ fetch("json/recommended.json").then(function(response){
                 <div class="author">${product.author}</div>
               <div class="price">${product.price} <span class="discount">${product.discount}</span></div>
               <div class="rating">${product.rating}</div>
-              <div class="btn"><button><i class="fa-solid fa-cart-plus"></i> Dodaj do koszyka</button></div>
+              <div class="btn add-cart-btn"><button><i class="fa-solid fa-cart-plus"></i> Dodaj do koszyka</button></div>
           </div>
 		`;
 	}
@@ -158,3 +158,19 @@ const books = new Swiper('.book-swiper', {
   }
 });
 
+
+
+
+// Responsive navbar
+const openMobileNav = document.querySelector(".open-mobile-nav");
+const closeMobileNav = document.querySelector(".close-mobile-nav");
+
+openMobileNav.addEventListener("click", () => {
+  document.querySelector("header.mobile").style.transform = "translateX(0)";
+  document.querySelector("header.mobile").style.width = "100%";
+  document.querySelector("header.mobile").style.height = "100vh";
+})
+closeMobileNav.addEventListener("click", () => {
+  document.querySelector("header.mobile").style.width = "0";
+  document.querySelector("header.mobile").style.transform = "translateX(-300px)";
+})
