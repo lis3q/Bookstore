@@ -35,7 +35,7 @@ section {
     margin: 0 15px;
 }
 .swiperBtn:hover {
-    background: #ffffff;
+    background: #757272;
 }
 .swiperBtn i {
     font-size: 1.5em !important;
@@ -166,7 +166,7 @@ header.mobile {
     width: 0;
     padding: 30px;
     display: flex;
-    transform: translateX(-300px);
+    transform: translateX(-2000px);
     transition: .3s ease-in-out;
     position: fixed;
     z-index: 100;
@@ -638,11 +638,13 @@ header.mobile .account-menu a {
 /* Footer */ 
 footer {
     padding: 3%;
+    background: #1f1f1f;
 }
 footer .logo {
     text-align: center;
     font-weight: 900;
     font-size: 2.6em;
+    color: #fff;
 }
 footer .footer-content {
     display: flex;
@@ -663,14 +665,14 @@ footer .footer-content .col .media-icons i {
     margin-right: 12px;
 }
 footer .footer-content .col h2 {
-    color: #1f1f1f;
+    color: #fff;
     text-decoration: underline #FF5A5A;
     padding-bottom: 5px;
 }
 footer .footer-content .col p,
 footer .footer-content .col a {
     text-decoration: none;
-    color: #525252;
+    color: #a7a7a7;
     transition: .3s ease;
 }
 footer .footer-content .col a:hover {
@@ -714,5 +716,194 @@ footer .footer-content .col a:hover {
     }
     .navbar nav {
         display: none;
+    }
+
+
+    /* Recommended */
+    #recommended {
+        margin-top: 30%;
+    }
+    /* Heading */
+    .heading {
+        font-size: 1.7em;
+    }
+    .subheading {
+        font-size: 1em;
+    }
+    .line {
+        width: 25%;
+    }
+    section {
+        padding: 3%;
+        margin: 15% 0;
+    }
+
+
+    /* Books box */
+    .content .box {
+        min-height: 440px;
+        padding: 0;
+        box-shadow: none;
+        overflow: hidden;
+    }
+    .content .box:hover {
+        box-shadow: none;
+    }
+    .content .box .image {
+        height: 240px;
+    }
+    .content .box .title {
+        font-size: 1.2em;
+        white-space: nowrap;
+    }
+    .content .box .author {
+        font-size: 0.7em;
+    }
+    .content .box .price {
+        font-size: 1.1em;
+    }
+    .content .box .btn button {
+        font-size: 0.8em;
+    }
+    .content .box .btn button i {
+        display: none;
+    }
+    .content .box .image .sale {
+        top: 5%;
+        left: 7%;
+        padding: 7px 12px;
+        font-size: 0.7em;
+    }
+    .content .box .image .fav-btn {
+        height: 34px;
+        width: 34px;
+        line-height: 34px;
+        font-size: 1em;
+    }
+
+
+    /* Swiper buttons */
+    .swiperBtn {
+        height: 0px !important;
+        width: 0px !important;
+    }
+    .swiperBtn i {
+        font-size: 0 !important;
+    }
+
+
+    /* Tiles */
+    .tiles-content {
+        margin-top: 8%;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+    .tiles-content .tile {
+        width: 46%;
+        height: 280px;
+        margin: 0;
+        gap: 15px;
+    }
+    .tiles-content .tile .image{
+        height: 67%;
+    }
+    .tiles-content .tile .title {
+        font-size: 1em;
+        padding: 0 25px;
+    }
+
+
+    /* Categories */
+    .categories-content {
+        gap: 20px;
+    }
+    .categories-content .category {
+        width: 100%;
+        height: 60px;
+        font-size: 1em;
+    }
+
+
+    /* Discount banner */
+    #banner {
+        padding: 0;
+        gap: 15px;
+    }
+    #banner h3 {
+        font-size: 1.2em;
+    }
+    #banner h1 {
+        font-size: 1.5em;
+    }
+    #banner .banner-btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+
+    /* Artists */
+    .artists-content .artist-box {
+        height: 400px;
+        width: 90%;
+    }
+    .artists-content .artist-box:nth-child(1) {
+        transform: translateY(0px);
+    }
+    .artists-content .artist-box:nth-child(2) {
+        transform: translateY(0px);
+    }
+    .artists-content .artist-box:nth-child(3) {
+        transform: translateY(0px);
+    }
+    .artists-content .artist-box .image {
+        height: 42%;
+        width: 55%;
+        margin-top: 35px;
+    }
+    .artists-content .artist-box .artist-name {
+        font-size: 1.4em;
+    }
+
+
+    /* Newsletter */
+    #newsletter { 
+        height: max-content;
+        padding: 10% 0;
+        margin: 0;
+    }
+    #newsletter h2 {
+        font-size: 2.1em;
+        font-weight: 700;
+    }
+    #newsletter p {
+        color: #e7d8ff;
+        font-size: 0.7em;
+    }
+    #newsletter input {
+        margin-top: 25px;
+        height: 46px;
+        width: 70%;
+        font-size: 0.9em;
+    }
+    #newsletter input[type="submit"] {
+        width: 30%;
+        font-size: 0.8em;
+    }
+
+
+    /* Footer */
+    footer {
+        padding: 10% 0;
+    }
+    footer .logo {
+        padding: 0;
+        font-size: 2.3em;
+    }
+    footer .footer-content {
+        margin-top: 14%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 35px;
     }
 }
