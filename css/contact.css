@@ -24,7 +24,7 @@ body {
     align-items: center;
     gap: 14px;
     background: #fff;
-    min-width: 600px;
+    width: 600px;
     min-height: 420px;
     padding: 30px 80px 40px 80px;
 }
@@ -85,4 +85,75 @@ body {
 }
 .media-icons a:hover {
     color: #FE5A5A;
+}
+
+/* Responsibility */
+@media screen and (max-width: 680px) {
+    /* Form */
+    .container {
+        margin-top: 22%;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0;
+    }
+    /* Form */
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        background: #fff;
+        width: 100%;
+        padding: 45px 15px;
+    }
+    .form h2 {
+        font-size: 1.9em;
+        margin-bottom: 30px;
+    }
+    .form input, textarea {
+        border: none;
+        color: #1f1f1f;
+        padding: 10px;
+        outline: none;
+        height: 44px;
+        border-radius: 1px;
+        width: 100%;
+        box-shadow: 0 0 14px 2px #0000000a;
+        transition: .3s ease;
+        font-size: 0.9em;
+    }
+    .form input:focus, .form textarea:focus {
+        box-shadow: 0 0 14px 2px #0000001f;
+    }
+    .form textarea {
+        resize: none;
+        height: 260px;
+    }
+    .form input[type="submit"] {
+        background: #FE5A5A;
+        margin-top: 10px;
+        color: #fff;
+        outline: none;
+        height: 52px;
+        font-size: 1.1em;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+
+    /* Adress info and map */
+    .address-info {
+        padding: 15px;
+        border-top: 1px solid #e0e0e0;
+    }
+    .address-info iframe {
+        width: 100%;
+        height: 300px;
+    }
+    .address-info p {
+        font-size: 0.9em;
+    }
+    .media-icons a {
+        font-size: 1.2em;
+    }
 }

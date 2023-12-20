@@ -116,6 +116,9 @@ window.addEventListener("scroll", () => {
 
 // About Us - Swiper
 const about = new Swiper('.reviews-swiper', {
+  autoplay: {
+    delay: 5000,
+  },
   slidesPerView: 3,
   slidesPerGroup: 1,
   loop: true,
@@ -130,6 +133,15 @@ const about = new Swiper('.reviews-swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+
+  breakpoints: {
+    600: {
+      slidesPerView: 3,
+    },
+    0: {
+      slidesPerView: 1,
+    }
+  }
 });
 
 

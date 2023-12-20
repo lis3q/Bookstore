@@ -191,3 +191,106 @@ body {
 .swiperBtn::before {
     content: '' !important;
 }
+
+
+/* Responsibility */
+@media screen and (max-width: 680px) {
+
+    /* About container */
+    .about-container {
+        margin: 20% 0 10% 0;
+        padding: 0;
+    }
+    .about-container .row {
+        flex-direction: column;
+        height: max-content;
+    }
+    .about-container .row.reverse {
+        flex-direction: column;
+    }
+    .row .content {
+        margin: 0;
+        padding: 16px 0;
+    }
+    .row .content .title {
+        font-size: 2.1em;
+        margin-bottom: 10px;
+    }
+    .row .content .text {
+        font-size: 1em;
+    }
+    .row .content .btn {
+        padding: 12px 22px;
+        font-size: 1em;
+    }
+    .about-container .row .image img {
+        width: 100%;
+    }
+
+
+    /* Benefits */
+    .benefits {
+        padding: 1%;
+        margin-top: 0;
+    }
+    .benefits-container {
+        margin-top: 8%;
+        gap: 20px;
+    }
+    .benefit {
+        width: 170px;
+        height: max-content;
+        padding-bottom: 5%;
+        box-shadow: 0 0 14px 2px #00000013;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .benefit .icon {
+        width: 60px;
+        height: 60px;
+        line-height: 72px;
+    }
+    .benefit .icon i {
+        font-size: 1.5em;
+    }
+    .benefit .benefit-title {
+        font-size: 1.1em;
+    }
+    .benefit .text {
+        font-size: 0.8em;
+    }
+
+
+    /* Customer reviews */
+    .review {
+        padding: 10% 0;
+    }
+    .review .image {
+        margin-top: -5%;
+    }
+    .review .image img {
+        height: 120px;
+        width: 120px;
+        box-shadow: 0;
+    }
+    .review .name {
+        font-size: 1.4em;
+    }
+    .review .opinion {
+        font-size: 0.8em;
+    }
+    .swiperBtn {
+        display: none !important;
+        height: 0 !important;
+        width: 0 !important;
+    }
+    .reviews {
+        margin: 12% 0 0 0;
+    }
+    .swiper-container {
+        padding: 5%;
+        margin: 8% 0 0 0;
+    }    
+}

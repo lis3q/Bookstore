@@ -1,6 +1,0 @@
-Dodawanie do koszyka:
-  1. Reakcja na każdy z buttonów add-to-cart.
-  2. Fetch json poszczególnego pliku.
-  3. Wyciągnąć informację z pliku json i wsadzić do diva.
-  4. Wyświetlić informacje w divie.
-  5. Usunąć informacje za pomoca ikony delete
