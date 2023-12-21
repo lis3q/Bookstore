@@ -18,7 +18,7 @@ body {
     gap: 15px;
     background: #fff;
     padding: 30px 80px 40px 80px;
-    min-width: 520px;
+    width: 520px;
     text-align: center;
 }
 .form h2 {
@@ -96,4 +96,19 @@ body {
 }
 .form .notacc a {
     color: #FE5A5A;
+}
+
+
+
+/* Responsibility */
+@media screen and (max-width: 680px) {
+    .form {
+        margin-top: 24%;
+        background: #f3f3f3;
+        padding: 20px;
+        width: 100%;
+    }
+    .form h2 {
+        margin-bottom: 10px;
+    }
 }

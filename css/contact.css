@@ -102,7 +102,7 @@ body {
         flex-direction: column;
         align-items: center;
         gap: 14px;
-        background: #fff;
+        background: #f3f3f3;
         width: 100%;
         padding: 45px 15px;
     }
@@ -144,7 +144,6 @@ body {
     /* Adress info and map */
     .address-info {
         padding: 15px;
-        border-top: 1px solid #e0e0e0;
     }
     .address-info iframe {
         width: 100%;
