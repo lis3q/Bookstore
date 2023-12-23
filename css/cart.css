@@ -9,51 +9,65 @@ body {
 
 /* Cart section */
 .cart {
-    margin-top: 12%;
+    margin-top: 10%;
     padding: 3%;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     gap: 50px;
+}
+.cart.favs {
+    flex-direction: column;
+}
+
+/* Cart heading */
+.cart .cart-heading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #b4b4b4;
+    padding-bottom: 30px;
+}
+.cart .cart-heading .clear-cart {
+    font-size: 1em;
+    color: #2e2e2e;
+    transition: .3s ease;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 13px 20px;
+    background: #e7e7e7;
+}
+.cart .cart-heading .clear-cart:hover {
+    color: #FE5A5A;
+}
+.cart .cart-heading h1 {
+    font-size: 1.4em;
+    letter-spacing: 0.2px;
+}
+.cart .cart-heading h1 span {
+    color: #5e5e5e;
 }
 
 /* Cart items section */
 .cart .items {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-    background: #fff;
-    padding: 35px 25px;
-}
-.cart .items .cart-heading {
-    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 40px;
     align-items: center;
-    justify-content: space-between;
 }
-.cart .items .cart-heading .clear-cart {
-    font-size: 1.1em;
-    color: #2e2e2e;
-    transition: .3s ease;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.cart .items .cart-heading .clear-cart:hover {
-    color: #FE5A5A;
-}
-.cart .items .cart-heading h1 {
-    font-size: 1.8em;
-}
-.cart .items .cart-heading h1 span {
-    color: #5e5e5e;
-}
-
-
 /* Cart single item */
 .cart .item {
     display: flex;
-    justify-content: flex-start;
-    padding: 25px 0;
-    border-top: 1px solid #ccc;
-    width: 80vh;
+    padding: 25px;
+    width: max-content;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 12px 2px #0000000c;
+}
+.cart .item img {
+    height: 340px;
 }
 .cart .item-info {
     padding: 0 15px;
@@ -78,6 +92,7 @@ body {
 .cart .item .book-info .category {
     color: #858585;
     font-size: 0.9em;
+    margin-top: 5px;
     cursor: pointer;
     transition: .3s ease;
 }
@@ -138,21 +153,36 @@ body {
 .cart .item .buttons {
     margin-top: 18px;
     display: flex;
-    gap: 5px;
+    flex-direction: column;
+    gap: 10px;
 }
-.cart .item .buttons i {
-    font-size: 1.4em;
-    margin-right: 15px;
+.cart .item .buttons a {
     cursor: pointer;
-    transition: .2s ease;
-    color: #232323;
+    transition: .3s ease;
+    background: #9C60FF;
     text-align: center;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 0.9em;
+    text-decoration: none;
+    font-weight: 500;
+}
+.cart .item .buttons a:hover {
+    background: #7a4ac7;
+}
+.cart .item .buttons a:nth-child(2) {
     color: #9C60FF;
+    background: none;
+    border: 2px solid #9C60FF;
+    transition: .3s ease;
 }
-.cart .item .buttons i:hover {
-    transform: translateY(-1px);
-    color: #8648eb;
+.cart .item .buttons a:nth-child(2):hover {
+    background: #7a4ac7;
+    color: #fff;
+    border: 2px solid #7a4ac7;
 }
+
+
 
 
 /* Cart info */
@@ -160,6 +190,8 @@ body {
     background: #fff;
     padding: 25px;
     height: max-content;
+    width: max-content;
+    margin: 0 auto;
 }
 .cart-info .row {
     display: flex;
@@ -247,4 +279,46 @@ body {
 }
 .cart-info .disc-code .btn-3:hover {
     background: #f55151;
+}
+
+
+/* Responsibility */
+@media screen and (max-width: 680px) {
+    .cart {
+        margin-top: 19%;
+        padding: 0;
+        justify-content: flex-start;
+    }
+    .cart .item {
+        width: 100%;
+        padding: 15px 0 0 0;
+        gap: 0;
+    }
+    .cart .items .cart-heading .clear-cart {
+        font-size: 0.9em;
+    }
+    .cart .items .cart-heading h1 {
+        font-size: 1.3em;
+    }
+    .cart .item .book-info {
+        padding: 0;
+    }
+    .cart .item .book-info .title {
+        font-size: 1.1em;
+    }
+    .cart .item .book-info .author {
+        font-size: 0.8em;
+    }
+    .cart .item img {
+        height: 200px;
+    }
+    .cart .item .book-info .category {
+        font-size: 0.8em;
+    }
+    .cart .item .book-info .price {
+        font-size: 1.3em;
+    }
+    .cart .item-info .options {
+        padding: 0;
+    }  
 }

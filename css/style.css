@@ -57,7 +57,7 @@ section {
     z-index: 90;
 }
 header {
-    height: 90px;
+    height: 80px;
     background: #232323;
     display: flex;
     justify-content: space-between;
@@ -121,7 +121,7 @@ header .search-bar i {
 
 /* Nav */
 nav {
-    height: 70px;
+    height: 60px;
     background: #232323;
     border-top: 1px solid #363636;
     padding: 0 3%;

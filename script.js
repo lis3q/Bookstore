@@ -164,6 +164,9 @@ const books = new Swiper('.book-swiper', {
     600: {
       slidesPerView: 6,
     },
+    1000: {
+      slidesPerView: 5,
+    },
     0: {
       slidesPerView: 2
     }
