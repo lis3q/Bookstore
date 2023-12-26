@@ -16,6 +16,7 @@ body {
 .filters {
     background: #fff;
     min-width: 400px;
+    height: max-content;
     padding: 20px 30px;
 }
 /* Filters heading */
@@ -123,17 +124,16 @@ body {
 
 /* Books section */
 .books {
-    background: #9C60FF;
     margin: 0 20px;
 }
 .books .content .boxes {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 20px;
     padding: 0 10px;
-    margin: 15px 0;
 }
 .books .content .boxes .box {
     background: #fff;
+    width: 280px;
 }

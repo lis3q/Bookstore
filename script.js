@@ -134,6 +134,13 @@ const about = new Swiper('.reviews-swiper', {
     prevEl: '.swiper-button-prev',
   },
 
+  // Pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  // Breakpoints (responsibility)
   breakpoints: {
     600: {
       slidesPerView: 3,
@@ -148,6 +155,7 @@ const about = new Swiper('.reviews-swiper', {
 // Books - Swiper
 const books = new Swiper('.book-swiper', {
   slidesPerView: 6,
+  slidesPerGroup: 1,
   grabCursor: 'true',
   spaceBetween: 20,
   fade: 'true',
@@ -158,6 +166,12 @@ const books = new Swiper('.book-swiper', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+  },
+
+  // Pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
   },
 
   breakpoints: {

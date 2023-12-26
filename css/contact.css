@@ -12,10 +12,13 @@ body {
 
 /* Container */
 .container {
-    margin-top: 12%;
+    margin-top: 9%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 70px;
+    align-items: center;
+    padding: 5% 0;
+    gap: 80px;
 }
 /* Form */
 .form {
@@ -24,9 +27,8 @@ body {
     align-items: center;
     gap: 14px;
     background: #fff;
-    width: 600px;
-    min-height: 420px;
-    padding: 30px 80px 40px 80px;
+    width: 800px;
+    padding: 30px 80px;
 }
 .form h2 {
     font-size: 1.9em;
@@ -56,7 +58,7 @@ body {
     margin-top: 10px;
     color: #fff;
     outline: none;
-    height: 52px;
+    height: 62px;
     font-size: 1.1em;
     font-weight: 500;
     cursor: pointer;
@@ -65,8 +67,9 @@ body {
 
 /* Address info */
 .address-info {
-    padding: 30px 80px 40px 80px;
+    padding: 30px;
     background: #fff;
+    width: 800px;
 }
 .address-info p {
     margin: 12px 0;
