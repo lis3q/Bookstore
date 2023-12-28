@@ -158,7 +158,7 @@ nav {
 
 /* Nav sticky */
 nav.sticky {
-    transform: translateY(-300px);
+    height: 30px;
 }
 
 /* Navbar, header mobile */
@@ -235,14 +235,14 @@ header.mobile .account-menu a {
     margin-top: 12%;
 }
 .heading {
-    font-size: 2.2em;
+    font-size: 2.1em;
     font-weight: 500;
     text-align: center;
 }
 .subheading {
     margin-top: 6px;
     color: var(--grey);
-    font-size: 1.3em;
+    font-size: 1.1em;
     text-align: center;
 }
 .line {
@@ -739,6 +739,9 @@ footer .footer-content .col a:hover {
 
 
     /* Books box */
+    .swiper-pagination {
+        display: none;
+    }
     .content .box {
         min-height: 440px;
         padding: 0;
@@ -749,7 +752,7 @@ footer .footer-content .col a:hover {
         box-shadow: none;
     }
     .content .box .image {
-        height: 240px;
+        height: 280px;
     }
     .content .box .title {
         font-size: 1.2em;
@@ -762,7 +765,7 @@ footer .footer-content .col a:hover {
         font-size: 1.1em;
     }
     .content .box .btn button {
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
     .content .box .btn button i {
         display: none;
@@ -793,13 +796,15 @@ footer .footer-content .col a:hover {
 
     /* Tiles */
     .tiles-content {
-        margin-top: 8%;
-        gap: 25px;
+        margin-top: 7%;
+        display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
     .tiles-content .tile {
-        width: 46%;
-        height: 280px;
+        width: 45%;
+        height: 250px;
         margin: 0;
         gap: 15px;
     }
@@ -807,7 +812,7 @@ footer .footer-content .col a:hover {
         height: 67%;
     }
     .tiles-content .tile .title {
-        font-size: 1em;
+        font-size: 0.9em;
         padding: 0 25px;
     }
 
@@ -825,7 +830,7 @@ footer .footer-content .col a:hover {
 
     /* Discount banner */
     #banner {
-        padding: 0;
+        padding: 8% 0;
         gap: 15px;
     }
     #banner h3 {

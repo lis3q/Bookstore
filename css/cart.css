@@ -13,8 +13,7 @@ body {
     padding: 3%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    gap: 50px;
+    justify-content: space-between;
 }
 .cart.favs {
     flex-direction: column;
@@ -27,7 +26,8 @@ body {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #b4b4b4;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
 }
 .cart .cart-heading .clear-cart {
     font-size: 1em;
@@ -37,13 +37,16 @@ body {
     cursor: pointer;
     padding: 13px 20px;
     background: #e7e7e7;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 .cart .cart-heading .clear-cart:hover {
     color: #FE5A5A;
 }
 .cart .cart-heading h1 {
     font-size: 1.4em;
-    letter-spacing: 0.2px;
+    font-weight: 600;
 }
 .cart .cart-heading h1 span {
     color: #5e5e5e;
@@ -52,74 +55,72 @@ body {
 /* Cart items section */
 .cart .items {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    gap: 40px;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 60%;
 }
+.cart .items.favs {
+    margin: 0 auto;
+    width: 80%;
+}
+
+
+
+
 /* Cart single item */
 .cart .item {
     display: flex;
-    padding: 25px;
-    width: max-content;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    width: 100%;
+    height: max-content;
+    gap: 50px;
     background: #fff;
     border-radius: 3px;
     box-shadow: 0 0 12px 2px #0000000c;
 }
-.cart .item img {
-    height: 340px;
+.item img {
+    height: 100px;
 }
-.cart .item-info {
-    padding: 0 15px;
-}
-/* Book info */
-.cart .item-info .book-info {
-    padding: 0 15px;
-}
-.cart .item .book-info .title {
+.item .item-info .title {
     font-weight: 600;
-    font-size: 1.8em;
+    font-size: 1.1em;
     cursor: pointer;
     transition: .3s ease;
 }
-.cart .item .book-info .author {
-    margin-top: 6px;
+.item .item-info .author {
+    margin-top: 2px;
     color: #474747;
-    font-size: 1em;
+    font-size: 0.8em;
     cursor: pointer;
     transition: .3s ease;
 }
-.cart .item .book-info .title:hover,
-.cart .item .book-info .author:hover {
+.item .item-info .title:hover,
+.item .item-info .author:hover {
     color: #FE5A5A;
 }
-.cart .item .book-info .price {
+.item .price-info .price {
     font-weight: 700;
-    font-size: 1.4em;
-    margin-top: 18px;
+    font-size: 1.1em;
     color: #FE5A5A;
 }
-.cart .item .book-info .delivery {
+.item .price-info .delivery {
     font-size: 0.8em;
-    margin-top: 5px;
+    margin-top: 2px;
     color: #363636;
 }
-
-
-/* Item Options */
-.cart .item-info .options {
-    display: flex;
-    flex-direction: column;
-    padding: 0 15px;
-}  
 /* Quantity */
-.cart .item .quantity {
+.item .quantity {
     display: flex;
-    margin-top: 25px;
     align-items: center;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
-.cart .item .quantity .minus,
-.cart .item .quantity .plus {
+.item .quantity .minus,
+.item .quantity .plus {
     width: 38px;
     height: 38px;
     font-size: 1.6em;
@@ -130,7 +131,7 @@ body {
     border: 1px solid #ccc;
     color: #4b4b4b;
 }
-.cart .item .quantity .number {
+.item .quantity .number {
     width: 48px;
     height: 38px;
     line-height: 38px;
@@ -142,38 +143,24 @@ body {
     border-left: none;
 }
 /* Buttons */
-.cart .item .buttons {
-    margin-top: 18px;
+.item .buttons {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    align-items: center;
 }
-.cart .item .buttons a {
+.item .buttons button {
     cursor: pointer;
-    transition: .3s ease;
-    background: #9C60FF;
-    text-align: center;
-    color: #fff;
-    padding: 12px 20px;
-    font-size: 0.9em;
-    text-decoration: none;
-    font-weight: 500;
-}
-.cart .item .buttons a:hover {
-    background: #7a4ac7;
-}
-.cart .item .buttons a:nth-child(2) {
-    color: #9C60FF;
+    transition: .2s ease;
     background: none;
-    border: 2px solid #9C60FF;
-    transition: .3s ease;
+    color: #282828;
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+    padding: 7px;
+    border-radius: 3px;
 }
-.cart .item .buttons a:nth-child(2):hover {
-    background: #7a4ac7;
-    color: #fff;
-    border: 2px solid #7a4ac7;
+.item .buttons button:hover {
+    background: #ededed;
 }
-
 
 
 
@@ -183,7 +170,6 @@ body {
     padding: 25px;
     height: max-content;
     width: max-content;
-    margin: 0 auto;
 }
 .cart-info .row {
     display: flex;
