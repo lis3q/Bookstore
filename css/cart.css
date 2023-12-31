@@ -262,49 +262,70 @@ body {
 
 /* Responsibility */
 @media screen and (max-width: 680px) {
+    body {
+        background: #fff;
+    }
     .cart {
-        margin-top: 30%;
-        justify-content: flex-start;
+        margin-top: 24%;
+        padding: 1.5%;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
     }
-    .cart .item {
+    .cart .items.favs {
         width: 100%;
-        padding: 15px;
-        gap: 0;
     }
-    .cart .items .cart-heading .clear-cart {
+    /* Cart items section */
+    .cart .items {
+        width: 100%;
+        padding-bottom: 5%;
+        justify-content: center;
+        align-items: center;
+    }
+    /* Cart heading */
+    .cart .cart-heading {
+        width: 100%;
+        padding: 0 3%;
+        border-bottom: 1px solid #e6e6e6;
+        padding-bottom: 5%;
+        gap: 15px;
+    }
+    .cart .cart-heading .clear-cart {
         font-size: 0.9em;
+        border-radius: 3px;
+        padding: 10px 17px;
+        background: #f4f4f4;
     }
-    .cart .items .cart-heading h1 {
-        font-size: 1.3em;
+    /* Cart single item */
+    .cart .item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        padding: 7.2%;
+        width: max-content;
+        background: #fff;
+        border-radius: 0;
     }
-    .cart .item .book-info {
-        padding: 0;
-    }
-    .cart .item .book-info .title {
-        font-size: 1.1em;
-    }
-    .cart .item .book-info .author {
-        font-size: 0.8em;
-    }
-    .cart .item img {
-        height: 200px;
-    }
-    .cart .item .book-info .category {
-        font-size: 0.8em;
-    }
-    .cart .item .book-info .price {
-        font-size: 1.3em;
-    }
-    .cart .item-info .options {
-        padding: 0;
-    }
-    .cart .item .buttons a {
-        padding: 11px 10px;
-        font-size: 0.8em;
+    .item img {
+        height: 170px;
     }
 
-    .cart .cart-info {
+    /* Cart info */
+    .cart-info {
+        padding: 7%;
+        margin: 2% 0;
+        box-shadow: 0 0 12px 2px #0000000c;
         width: 100%;
+    }
+    .cart-info h2 {
+        font-size: 0.9em;
+    }
+    .cart-info .total-price-heading {
+        font-size: 1.2em;
+    }
+    .cart-info .btn-1,
+    .cart-info .btn-2 {
+        font-size: 0.9em;
     }
 }
