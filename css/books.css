@@ -52,6 +52,11 @@ body {
     font-size: 1.2em;
     color: #2c2c2c;
 }
+.filter-name i {
+    color: #6c6c6c;
+    font-size: 0.9em;
+    margin-left: 5px;
+}
 .filter button {
     border: none;
     background: none;
@@ -136,4 +141,75 @@ body {
 .books .content .boxes .box {
     background: #fff;
     width: 280px;
+}
+
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    width: max-content;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 6px;
+    margin-bottom: 2%;
+}
+.pagination a {
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #1f1f1f;
+    font-weight: 500;
+    transition: .3s ease;
+}
+.pagination a.active {
+    background: #FE5A5A;
+    color: #fff;
+}
+.pagination a.active:hover {
+    background: #FE5A5A;
+}
+.pagination a:hover {
+    background: #ffa0a0;
+    color: #fff;
+}
+
+
+/* Responsibility */
+@media screen and (max-width: 680px) {
+    body {
+        background: #fff;
+    }
+    .container {
+        margin: 26% 0;
+        padding: 0;
+        flex-direction: column;
+    }
+    .filters {
+        width: 100%;
+    }
+    .filters .filter {
+        height: 26px;
+        overflow: hidden;
+        transition: .4s ease-in-out;
+        cursor: pointer;
+    }
+    .filters .filter.active {
+        height: max-content;
+    }
+    /* Books section */
+    .books {
+        margin: 5% 0;
+        padding: 0;
+        width: 100%;
+    }
+    .books .content .boxes {
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    .books .content .boxes .box {
+        width: 160px;
+    }
 }

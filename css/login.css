@@ -4,7 +4,7 @@
     margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; scroll-behavior: smooth;
 }
 body {
-    background: #f1f1f1;
+    background: #f6f6f6;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -105,7 +105,7 @@ body {
 @media screen and (max-width: 680px) {
     .form {
         margin-top: 24%;
-        background: #f3f3f3;
+        background: #f6f6f6;
         padding: 20px;
         width: 100%;
     }

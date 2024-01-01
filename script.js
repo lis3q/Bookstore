@@ -96,7 +96,7 @@ fetch("json/all.json").then(function(response){
               <div class="title">${product.title}</div>
                 <div class="author">${product.author}</div>
               <div class="price">${product.price} <span class="discount">${product.discount}</span></div>
-              <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <div class="rating">${product.rating}</div>
               <div class="btn"><button><i class="fa-solid fa-cart-plus"></i> Dodaj do koszyka</button></div>
           </div>
 		`;

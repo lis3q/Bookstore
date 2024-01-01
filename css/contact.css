@@ -4,7 +4,7 @@
     margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; scroll-behavior: smooth;
 }
 body {
-    background: #f1f1f1;
+    background: #f6f6f6;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,7 +98,7 @@ body {
 @media screen and (max-width: 680px) {
     /* Container */
     .container {
-        margin-top: 62%;
+        margin-top: 82%;
         padding: 0;
         width: 100%;
         flex-direction: column-reverse;
@@ -107,6 +107,7 @@ body {
     .form {
         width: 100%;
         padding: 30px;
+        background: #f6f6f6;
     }
     .form h2 {
         padding-top: 45px;
