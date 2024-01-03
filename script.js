@@ -5,10 +5,12 @@ fetch("json/recommended.json").then(function(response){
 .then(function(products){
 	let book = document.querySelector("#recommended .swiper-wrapper");
 	let out = "";
+
 	for(let product of products){
 		out += `
             <div class="box swiper-slide">
               <div class="image">
+                  <div class="sale">${product.sale}</div>
                   <img src="${product.img}" alt="${product.author}/${product.title}">
                   <div class="fav-btn"><i class="fa-solid fa-heart-circle-plus"></i></div>
               </div>
@@ -19,10 +21,29 @@ fetch("json/recommended.json").then(function(response){
               <div class="btn add-cart-btn"><button><i class="fa-solid fa-cart-plus"></i> Dodaj do koszyka</button></div>
           </div>
 		`;
-	}
 
-	book.innerHTML = out;
+    book.innerHTML = out;
+
+    // Rating system
+    let rate = document.querySelectorAll("#recommended .rating");
+    rate.forEach(rt => {
+      let nr = rt.innerText;
+      let icon = '<i class="fa-solid fa-star"></i>';
+      let result = icon.repeat(nr);
+      rt.innerHTML = result;
+    })
+
+    // Checking whether the product is on sale
+    let sale = document.querySelectorAll(".sale");
+    sale.forEach(pr => {
+      if (pr.innerText === "") {
+        pr.style.display = "none";
+      }
+    }) 
+  
+  }
 });
+
 
 
 // Displaying new books from a JSON file
@@ -36,20 +57,41 @@ fetch("json/news.json").then(function(response){
 		out += `
             <div class="swiper-slide box">
               <div class="image">
+                  <div class="sale">${product.sale}</div>
                   <img src="${product.img}" alt="${product.author}/${product.title}">
                   <div class="fav-btn"><i class="fa-solid fa-heart-circle-plus"></i></div>
               </div>
               <div class="title">${product.title}</div>
                 <div class="author">${product.author}</div>
               <div class="price">${product.price} <span class="discount">${product.discount}</span></div>
-              <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <div class="rating">${product.rating}</div>
               <div class="btn"><button><i class="fa-solid fa-cart-plus"></i> Dodaj do koszyka</button></div>
           </div>
 		`;
-	}
 
-	book.innerHTML = out;
+    book.innerHTML = out;
+
+    // Rating system
+    let rate = document.querySelectorAll("#news .rating");
+    rate.forEach(rt => {
+      let nr = rt.innerText;
+      let icon = '<i class="fa-solid fa-star"></i>';
+      let result = icon.repeat(nr);
+      rt.innerHTML = result;
+    })
+
+    // Checking whether the product is on sale
+    let sale = document.querySelectorAll(".sale");
+    sale.forEach(pr => {
+      if (pr.innerText === "") {
+        pr.style.display = "none";
+      }
+    }) 
+
+	}
 });
+
+
 
 // Displaying sale books from a JSON file
 fetch("json/sale.json").then(function(response){
@@ -69,41 +111,26 @@ fetch("json/sale.json").then(function(response){
               <div class="title">${product.title}</div>
                 <div class="author">${product.author}</div>
               <div class="price">${product.price} <span class="discount">${product.discount}</span></div>
-              <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-              <div class="btn"><button><i class="fa-solid fa-cart-plus"></i> Dodaj do koszyka</button></div>
-          </div>
-		`;
-	}
-
-	book.innerHTML = out;
-});
-
-// Displaying all books from a JSON file
-fetch("json/all.json").then(function(response){
-	return response.json();
-})
-.then(function(products){
-	let book = document.querySelector(".books .boxes");
-	let out = "";
-	for(let product of products){
-		out += `
-            <div class="swiper-slide box">
-              <div class="image">
-                  <div class="sale">${product.sale}</div>
-                  <img src="${product.img}" alt="${product.author}/${product.title}">
-                  <div class="fav-btn"><i class="fa-solid fa-heart-circle-plus"></i></div>
-              </div>
-              <div class="title">${product.title}</div>
-                <div class="author">${product.author}</div>
-              <div class="price">${product.price} <span class="discount">${product.discount}</span></div>
               <div class="rating">${product.rating}</div>
               <div class="btn"><button><i class="fa-solid fa-cart-plus"></i> Dodaj do koszyka</button></div>
           </div>
 		`;
-	}
 
-	book.innerHTML = out;
+    book.innerHTML = out;
+
+    // Rating system
+    let rate = document.querySelectorAll("#sale .rating");
+    rate.forEach(rt => {
+      let nr = rt.innerText;
+      let icon = '<i class="fa-solid fa-star"></i>';
+      let result = icon.repeat(nr);
+      rt.innerHTML = result;
+    })
+
+	}
 });
+
+
 
 
 // About Us - Swiper
@@ -167,15 +194,12 @@ const books = new Swiper('.book-swiper', {
   },
 
   breakpoints: {
-    600: {
+    0: {
+      slidesPerView: 2,
+    },
+    1024: {
       slidesPerView: 6,
     },
-    1000: {
-      slidesPerView: 5,
-    },
-    0: {
-      slidesPerView: 2
-    }
   }
 });
 

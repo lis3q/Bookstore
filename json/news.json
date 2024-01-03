@@ -1,145 +1,122 @@
 [
     {
         "id": "1",
-        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/metro-2033-b-iext128004727.jpg",
-        "author": "Glukhovsky Dmitry",
-        "title": "Metro 2033",
-        "price": "39.99 zł",
-        "discount": "49.99 zł"
+        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/venom-b-iext140329595.jpg",
+        "author": "Aleksandra Kondraciuk",
+        "title": "Venom",
+        "price": "32,43 zł",
+        "discount": "",
+        "sale": "",
+        "rating": 5
     },
 
     {
         "id": "2",
-        "img": "https://cf-tk.statiki.pl/images/large/217/9788367339124.jpg",
-        "author": "Dashner James",
-        "title": "Więzień labiryntu",
-        "price": "22.99 zł",
-        "discount": "22.99 zł"
+        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/hellish-heat-b-iext142159115.jpg",
+        "author": "Weronika Plota",
+        "title": "Hellish Heat",
+        "price": "29,18 zł",
+        "discount": "",
+        "sale": "",
+        "rating": 5
     },
 
     {
         "id": "3",
-        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/igrzyska-smierci-b-iext130562715.jpg",
-        "author": "Collins Suzane",
-        "title": "Igrzyska śmierci",
-        "price": "35.99 zł",
-        "discount": "45.99 zł"
+        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/fala-b-iext141892188.jpg",
+        "author": "Krasowka Maria",
+        "title": "Fala",
+        "price": "28,26 zł",
+        "discount": "",
+        "sale": "",
+        "rating": 2
     },
 
     {
         "id": "4",
-        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/outsider-b-iext140311959.jpg",
-        "author": "King Stephen",
-        "title": "Outsider",
-        "price": "24.99 zł",
-        "discount": "24.99 zł"
+        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/look-at-me-princess-b-iext137964485.jpg",
+        "author": "Aleksandra Nil",
+        "title": "Look at Me Princess",
+        "price": "27,23 zł",
+        "discount": "",
+        "sale": "",
+        "rating": 4
     },
 
     {
         "id": "5",
-        "img": "https://s.lubimyczytac.pl/upload/books/5085000/5085885/1098860-352x500.jpg",
-        "author": "Tadeusz Dołęga-Mostowicz",
-        "title": "Znachor",
-        "price": "23.20 zł",
-        "discount": "33.20 zł"
+        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/red-lies-b-iext140850672.jpg",
+        "author": "Balicka Joanna",
+        "title": "Red Lies",
+        "price": "32,43 zł",
+        "discount": "",
+        "sale": "",
+        "rating": 4
     },
 
     {
         "id": "6",
-        "img": "https://s.lubimyczytac.pl/upload/books/5076000/5076796/1086084-352x500.jpg",
-        "author": "King Stephen",
-        "title": "Holly",
-        "price": "28.97 zł",
-        "discount": "38.97 zł"
+        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/start-over-b-iext137966114.jpg",
+        "author": "Izabella Nowaczyk",
+        "title": "Start Over",
+        "price": "27,88 zł",
+        "discount": "",
+        "sale": "",
+        "rating": 3
     },
 
     {
         "id": "7",
-        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/diuna-kroniki-diuny-tom-1-b-iext137017822.jpg",
-        "author": "Herbert Frank",
-        "title": "Diuna",
-        "price": "34.99 zł",
-        "discount": "44.99 zł"
+        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/vincent-b-iext137970341.jpg",
+        "author": "Brylewska Julia",
+        "title": "Vincent",
+        "price": "27,88 zł",
+        "discount": "",
+        "sale": "",
+        "rating": 3
     },
 
     {
         "id": "8",
-        "img": "https://s.lubimyczytac.pl/upload/books/5087000/5087587/1101682-352x500.jpg",
-        "author": "Małecki Robert",
-        "title": "Zrost",
-        "price": "29.77 zł",
-        "discount": "39.77 zł"
+        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/royal-b-iext137971993.jpg",
+        "author": "Zandler Sylwia",
+        "title": "Royal",
+        "price": "27,23 zł",
+        "discount": "",
+        "sale": "",
+        "rating": 2
     },
 
     {
         "id": "9",
-        "img": "https://s.lubimyczytac.pl/upload/books/5088000/5088059/1102668-352x500.jpg",
-        "author": "Janiszewska Izabela",
-        "title": "W szponach",
-        "price": "26.35 zł",
-        "discount": "36.35 zł"
+        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/sensitive-heart-b-iext142562740.jpg",
+        "author": "Wiśniewska Katarzyna",
+        "title": "Sensitive Heart",
+        "price": "32,43 zł",
+        "discount": "",
+        "sale": "",
+        "rating": 4
     },
 
     {
         "id": "10",
-        "img": "https://s.lubimyczytac.pl/upload/books/5079000/5079092/1087622-352x500.jpg",
-        "author": "Mróz Remigiusz",
-        "title": "Zarzut",
-        "price": "26.75 zł",
-        "discount": "36.75 zł"
+        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/michael-b-iext140339867.jpg",
+        "author": "Brylewska Julia",
+        "title": "Michael",
+        "price": "29,18 zł",
+        "discount": "",
+        "sale": "",
+        "rating": 3
     },
 
     {
         "id": "11",
-        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/metro-2033-b-iext128004727.jpg",
-        "author": "Glukhovsky Dmitry",
-        "title": "Metro 2033",
-        "price": "39.99 zł",
-        "discount": "49.99 zł"
-    },
-
-    {
-        "id": "12",
-        "img": "https://cf-tk.statiki.pl/images/large/217/9788367339124.jpg",
-        "author": "Dashner James",
-        "title": "Więzień labiryntu",
-        "price": "22.99 zł",
-        "discount": "22.99 zł"
-    },
-
-    {
-        "id": "13",
-        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/igrzyska-smierci-b-iext130562715.jpg",
-        "author": "Collins Suzane",
-        "title": "Igrzyska śmierci",
-        "price": "35.99 zł",
-        "discount": "45.99 zł"
-    },
-
-    {
-        "id": "14",
-        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/outsider-b-iext140311959.jpg",
-        "author": "King Stephen",
-        "title": "Outsider",
-        "price": "24.99 zł",
-        "discount": "24.99 zł"
-    },
-
-    {
-        "id": "15",
-        "img": "https://s.lubimyczytac.pl/upload/books/5085000/5085885/1098860-352x500.jpg",
-        "author": "Tadeusz Dołęga-Mostowicz",
-        "title": "Znachor",
-        "price": "23.20 zł",
-        "discount": "33.20 zł"
-    },
-
-    {
-        "id": "16",
-        "img": "https://s.lubimyczytac.pl/upload/books/5076000/5076796/1086084-352x500.jpg",
-        "author": "King Stephen",
-        "title": "Holly",
-        "price": "28.97 zł",
-        "discount": "38.97 zł"
+        "img": "https://www.oczytani.pl/galerie/w/wiezien-labiryntu-tom-3-lek-n_19003.webp",
+        "author": "James Dashner",
+        "title": "Więzień labiryntu: lek na śmierć",
+        "price": "38,90 zł",
+        "discount": "",
+        "sale": "",
+        "rating": 5
     }
 ]

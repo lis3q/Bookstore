@@ -5,7 +5,9 @@
         "author": "Glukhovsky Dmitry",
         "title": "Metro 2033",
         "price": "39.99 zł",
-        "discount": "49.99 zł"
+        "discount": "49.99 zł",
+        "sale": "-20%",
+        "rating": 5
     },
 
     {
@@ -14,7 +16,9 @@
         "author": "Dashner James",
         "title": "Więzień labiryntu",
         "price": "22.99 zł",
-        "discount": ""
+        "discount": "",
+        "sale": "",
+        "rating": 5
     },
 
     {
@@ -23,7 +27,8 @@
         "author": "Collins Suzane",
         "title": "Igrzyska śmierci",
         "price": "35.99 zł",
-        "discount": "45.99 zł",
+        "discount": "",
+        "sale": "",
         "rating": 5
     },
 
@@ -33,7 +38,9 @@
         "author": "King Stephen",
         "title": "Outsider",
         "price": "24.99 zł",
-        "discount": ""
+        "discount": "",
+        "sale": "",
+        "rating": 5
     },
 
     {
@@ -42,7 +49,9 @@
         "author": "Tadeusz Dołęga-Mostowicz",
         "title": "Znachor",
         "price": "23.20 zł",
-        "discount": "33.20 zł"
+        "discount": "33.20 zł",
+        "sale": "-30%",
+        "rating": 4
     },
 
     {
@@ -51,7 +60,9 @@
         "author": "King Stephen",
         "title": "Holly",
         "price": "28.97 zł",
-        "discount": "38.97 zł"
+        "discount": "",
+        "sale": "",
+        "rating": 5
     },
 
     {
@@ -60,7 +71,9 @@
         "author": "Herbert Frank",
         "title": "Diuna",
         "price": "34.99 zł",
-        "discount": "44.99 zł"
+        "discount": "",
+        "sale": "",
+        "rating": 5
     },
 
     {
@@ -69,7 +82,9 @@
         "author": "Małecki Robert",
         "title": "Zrost",
         "price": "29.77 zł",
-        "discount": "39.77 zł"
+        "discount": "39.77 zł",
+        "sale": "-25%",
+        "rating": 5
     },
 
     {
@@ -78,7 +93,9 @@
         "author": "Janiszewska Izabela",
         "title": "W szponach",
         "price": "26.35 zł",
-        "discount": "36.35 zł"
+        "discount": "",
+        "sale": "",
+        "rating": 4
     },
 
     {
@@ -87,60 +104,19 @@
         "author": "Mróz Remigiusz",
         "title": "Zarzut",
         "price": "26.75 zł",
-        "discount": "36.75 zł"
+        "discount": "",
+        "sale": "",
+        "rating": 4
     },
 
     {
         "id": "11",
-        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/metro-2033-b-iext128004727.jpg",
-        "author": "Glukhovsky Dmitry",
-        "title": "Metro 2033",
-        "price": "39.99 zł",
-        "discount": "49.99 zł"
-    },
-
-    {
-        "id": "12",
-        "img": "https://cf-tk.statiki.pl/images/large/217/9788367339124.jpg",
-        "author": "Dashner James",
-        "title": "Więzień labiryntu",
-        "price": "22.99 zł",
-        "discount": "22.99 zł"
-    },
-
-    {
-        "id": "13",
-        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/igrzyska-smierci-b-iext130562715.jpg",
-        "author": "Collins Suzane",
-        "title": "Igrzyska śmierci",
-        "price": "35.99 zł",
-        "discount": "45.99 zł"
-    },
-
-    {
-        "id": "14",
-        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/outsider-b-iext140311959.jpg",
-        "author": "King Stephen",
-        "title": "Outsider",
-        "price": "24.99 zł",
-        "discount": "24.99 zł"
-    },
-
-    {
-        "id": "15",
-        "img": "https://s.lubimyczytac.pl/upload/books/5085000/5085885/1098860-352x500.jpg",
-        "author": "Tadeusz Dołęga-Mostowicz",
-        "title": "Znachor",
-        "price": "23.20 zł",
-        "discount": "33.20 zł"
-    },
-
-    {
-        "id": "16",
-        "img": "https://s.lubimyczytac.pl/upload/books/5076000/5076796/1086084-352x500.jpg",
-        "author": "King Stephen",
-        "title": "Holly",
-        "price": "28.97 zł",
-        "discount": "38.97 zł"
+        "img": "https://www.oczytani.pl/galerie/w/wiezien-labiryntu-tom-3-lek-n_19003.webp",
+        "author": "James Dashner",
+        "title": "Więzień labiryntu: lek na śmierć",
+        "price": "38,90 zł",
+        "discount": "",
+        "sale": "",
+        "rating": 5
     }
 ]

@@ -56,6 +56,7 @@ body {
     color: #6c6c6c;
     font-size: 0.9em;
     margin-left: 5px;
+    display: none;
 }
 .filter button {
     border: none;
@@ -188,6 +189,9 @@ body {
     }
     .filters {
         width: 100%;
+    }
+    .filters .filter-name i {
+        display: inline-block;
     }
     .filters .filter {
         height: 26px;

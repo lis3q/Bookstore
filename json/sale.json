@@ -1,151 +1,122 @@
 [
     {
         "id": "1",
-        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/metro-2033-b-iext128004727.jpg",
-        "author": "Glukhovsky Dmitry",
-        "title": "Metro 2033",
-        "price": "39.99 zł",
-        "discount": "49.99 zł",
-        "sale": "-40%"
+        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/sekret-pacjentki-b-iext142193763.jpg",
+        "author": "White Loreth Anne",
+        "title": "Sekret pacjentki",
+        "price": "26,75 zł",
+        "discount": "31,75 zł",
+        "sale": "-40%",
+        "rating": 5
     },
 
     {
         "id": "2",
-        "img": "https://cf-tk.statiki.pl/images/large/217/9788367339124.jpg",
-        "author": "Dashner James",
-        "title": "Więzień labiryntu",
-        "price": "22.99 zł",
-        "discount": "22.99 zł",
-        "sale": "-30%"
+        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/kabalista-b-iext137845336.jpg",
+        "author": "Mróz Remigiusz",
+        "title": "Kabalista",
+        "price": "24,70 zł",
+        "discount": "31,70 zł",
+        "sale": "-30%",
+        "rating": 5
     },
 
     {
         "id": "3",
-        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/igrzyska-smierci-b-iext130562715.jpg",
-        "author": "Collins Suzane",
-        "title": "Igrzyska śmierci",
-        "price": "35.99 zł",
-        "discount": "45.99 zł",
-        "sale": "-60%"
+        "img": "https://s.lubimyczytac.pl/upload/books/5087000/5087587/1101682-352x500.jpg",
+        "author": "Małecki Robert",
+        "title": "Zrost",
+        "price": "29.77 zł",
+        "discount": "39.77 zł",
+        "sale": "-25%",
+        "rating": 4
     },
 
     {
         "id": "4",
-        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/outsider-b-iext140311959.jpg",
-        "author": "King Stephen",
-        "title": "Outsider",
-        "price": "24.99 zł",
-        "discount": "24.99 zł",
-        "sale": "-40%"
-    },
-
-    {
-        "id": "5",
         "img": "https://s.lubimyczytac.pl/upload/books/5085000/5085885/1098860-352x500.jpg",
         "author": "Tadeusz Dołęga-Mostowicz",
         "title": "Znachor",
         "price": "23.20 zł",
         "discount": "33.20 zł",
-        "sale": "-40%"
+        "sale": "-30%",
+        "rating": 4
     },
 
     {
-        "id": "6",
-        "img": "https://s.lubimyczytac.pl/upload/books/5076000/5076796/1086084-352x500.jpg",
-        "author": "King Stephen",
-        "title": "Holly",
-        "price": "28.97 zł",
-        "discount": "38.97 zł",
-        "sale": "-30%"
-    },
-
-    {
-        "id": "7",
-        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/diuna-kroniki-diuny-tom-1-b-iext137017822.jpg",
-        "author": "Herbert Frank",
-        "title": "Diuna",
-        "price": "34.99 zł",
-        "discount": "44.99 zł"
-    },
-
-    {
-        "id": "8",
-        "img": "https://s.lubimyczytac.pl/upload/books/5087000/5087587/1101682-352x500.jpg",
-        "author": "Małecki Robert",
-        "title": "Zrost",
-        "price": "29.77 zł",
-        "discount": "39.77 zł"
-    },
-
-    {
-        "id": "9",
-        "img": "https://s.lubimyczytac.pl/upload/books/5088000/5088059/1102668-352x500.jpg",
-        "author": "Janiszewska Izabela",
-        "title": "W szponach",
-        "price": "26.35 zł",
-        "discount": "36.35 zł"
-    },
-
-    {
-        "id": "10",
-        "img": "https://s.lubimyczytac.pl/upload/books/5079000/5079092/1087622-352x500.jpg",
-        "author": "Mróz Remigiusz",
-        "title": "Zarzut",
-        "price": "26.75 zł",
-        "discount": "36.75 zł"
-    },
-
-    {
-        "id": "11",
+        "id": "5",
         "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/metro-2033-b-iext128004727.jpg",
         "author": "Glukhovsky Dmitry",
         "title": "Metro 2033",
         "price": "39.99 zł",
-        "discount": "49.99 zł"
+        "discount": "49.99 zł",
+        "sale": "-20%",
+        "rating": 5
     },
 
     {
-        "id": "12",
-        "img": "https://cf-tk.statiki.pl/images/large/217/9788367339124.jpg",
-        "author": "Dashner James",
-        "title": "Więzień labiryntu",
-        "price": "22.99 zł",
-        "discount": "22.99 zł"
+        "id": "6",
+        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/cyberpunk-2077-bez-przypadku-b-iext136966057.jpg",
+        "author": "Kosik Rafał",
+        "title": "Cyberpunk 2077. Bez przypadku",
+        "price": "32,47 zł",
+        "discount": "39,47 zł",
+        "sale": "-15%",
+        "rating": 3
     },
 
     {
-        "id": "13",
-        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/igrzyska-smierci-b-iext130562715.jpg",
-        "author": "Collins Suzane",
-        "title": "Igrzyska śmierci",
-        "price": "35.99 zł",
-        "discount": "45.99 zł"
+        "id": "7",
+        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/hyperion-b-iext135281061.jpg",
+        "author": "Simmons Dan",
+        "title": "Hyperion",
+        "price": "37.85 zł",
+        "discount": "43,85 zł",
+        "sale": "-20%",
+        "rating": 5
     },
 
     {
-        "id": "14",
-        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/outsider-b-iext140311959.jpg",
+        "id": "8",
+        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/elon-musk-b-iext141949592.jpg",
+        "author": "Isaacson Walter",
+        "title": "Elon Musk",
+        "price": "49,83 zł",
+        "discount": "56,83 zł",
+        "sale": "-30%",
+        "rating": 5
+    },
+
+    {
+        "id": "9",
+        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/ostatnie-zyczenie-wiedzmin-tom-1-b-iext121324546.jpg",
+        "author": "Sapkowski Andrzej",
+        "title": "Ostatnie życzenie. Wiedźmin. Tom 1",
+        "price": "29,93 zł",
+        "discount": "37,93 zł",
+        "sale": "-20%",
+        "rating": 5
+    },
+
+    {
+        "id": "10",
+        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/basniowa-opowiesc-wersja-limitowana-b-iext141617558.jpg",
         "author": "King Stephen",
-        "title": "Outsider",
-        "price": "24.99 zł",
-        "discount": "24.99 zł"
+        "title": "Baśniowa opowieść",
+        "price": "44,48 zł",
+        "discount": "65.48 zł",
+        "sale": "-40%",
+        "rating": 4
     },
 
     {
-        "id": "15",
-        "img": "https://s.lubimyczytac.pl/upload/books/5085000/5085885/1098860-352x500.jpg",
-        "author": "Tadeusz Dołęga-Mostowicz",
-        "title": "Znachor",
-        "price": "23.20 zł",
-        "discount": "33.20 zł"
-    },
-
-    {
-        "id": "16",
-        "img": "https://s.lubimyczytac.pl/upload/books/5076000/5076796/1086084-352x500.jpg",
-        "author": "King Stephen",
-        "title": "Holly",
-        "price": "28.97 zł",
-        "discount": "38.97 zł"
+        "id": "11",
+        "img": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/star-wars-cien-sithow-b-iext137976414.jpg",
+        "author": "Christopher Adam",
+        "title": "Star Wars. Cień Sithów",
+        "price": "32,67 zł",
+        "discount": "38,67 zł",
+        "sale": "-10%",
+        "rating": 4
     }
 ]
