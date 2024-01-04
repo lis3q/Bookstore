@@ -1,3 +1,59 @@
+// Add to cart function
+function addCartBtn() {
+  let cartBtn = document.querySelectorAll(".add-cart-btn");
+  cartBtn.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const img = btn.parentElement.parentElement.children[0].children[1];
+      const title = btn.parentElement.parentElement.children[1];
+      const author = btn.parentElement.parentElement.children[2];
+      const price = btn.parentElement.parentElement.children[3];
+      
+      fetch('cart.html').then(function (response) {
+        // The API call was successful!
+        return response.text();
+      }).then(function (html) {
+      
+        // Convert the HTML string into a document object
+        let parser = new DOMParser();
+        let doc = parser.parseFromString(html, 'text/html');
+      
+        let cart = doc.querySelector('.cart .items');
+
+        let item = document.createElement("div");
+        item.classList.add("item");
+        item.innerHTML = 
+        `
+            <div class="image"><img src="${img.src}" alt=""></div>
+            <div class="item-info">
+                <div class="title">${title.textContent}</div>
+                <div class="author">${author.textContent}</div>
+            </div>
+            <div class="price-info">
+                <div class="price">${price.textContent}</div>
+                <div class="delivery">Dostawa od 9,99 zł</div>
+            </div>
+            <div class="quantity">
+                <div class="minus">-</div>
+                <div class="number">1</div>
+                <div class="plus">+</div>
+            </div>
+            <div class="buttons">
+                <button><i class="fa-regular fa-heart"></i></button>
+                <button><i class="fa-regular fa-trash-can"></i></button>
+            </div>
+        `
+
+      console.log(cart)
+      cart.appendChild(item);
+      
+      }).catch(function (err) {
+        // There was an error
+        console.warn('Something went wrong.', err);
+      });
+    })
+})
+}
+
 // Displaying recommended books from a JSON file
 fetch("json/recommended.json").then(function(response){
 	return response.json();
@@ -15,14 +71,16 @@ fetch("json/recommended.json").then(function(response){
                   <div class="fav-btn"><i class="fa-solid fa-heart-circle-plus"></i></div>
               </div>
               <div class="title">${product.title}</div>
-                <div class="author">${product.author}</div>
+              <div class="author">${product.author}</div>
               <div class="price">${product.price} <span class="discount">${product.discount}</span></div>
               <div class="rating">${product.rating}</div>
-              <div class="btn add-cart-btn"><button><i class="fa-solid fa-cart-plus"></i> Dodaj do koszyka</button></div>
+              <div class="btn"><button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Dodaj do koszyka</button></div>
           </div>
 		`;
 
     book.innerHTML = out;
+
+    addCartBtn()
 
     // Rating system
     let rate = document.querySelectorAll("#recommended .rating");
@@ -202,7 +260,6 @@ const books = new Swiper('.book-swiper', {
     },
   }
 });
-
 
 
 

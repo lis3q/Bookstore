@@ -21,7 +21,7 @@ body {
     display: flex;
 }
 /* Form */
-.form {
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,11 +30,11 @@ body {
     padding: 30px 80px;
     width: 800px;
 }
-.form h2 {
+form h2 {
     font-size: 1.9em;
     margin-bottom: 30px;
 }
-.form input, textarea {
+form input, textarea {
     border: none;
     color: #1f1f1f;
     padding: 10px;
@@ -46,14 +46,14 @@ body {
     transition: .3s ease;
     font-size: 0.9em;
 }
-.form input:focus, .form textarea:focus {
+form input:focus, .form textarea:focus {
     box-shadow: 0 0 14px 2px #0000001f;
 }
-.form textarea {
+form textarea {
     resize: none;
     height: 140px;
 }
-.form input[type="submit"] {
+form input[type="submit"] {
     background: #FE5A5A;
     margin-top: 10px;
     color: #fff;
@@ -104,16 +104,16 @@ body {
         flex-direction: column-reverse;
     }
     /* Form */
-    .form {
+    form {
         width: 100%;
         padding: 30px;
         background: #f6f6f6;
     }
-    .form h2 {
+    form h2 {
         padding-top: 45px;
         font-size: 1.7em;
     }
-    .form textarea {
+    form textarea {
         height: 200px;
     }
 
