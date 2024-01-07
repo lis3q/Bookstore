@@ -7,52 +7,63 @@ function addCartBtn() {
       const title = btn.parentElement.parentElement.children[1];
       const author = btn.parentElement.parentElement.children[2];
       const price = btn.parentElement.parentElement.children[3];
-      
-      fetch('cart.html').then(function (response) {
-        // The API call was successful!
-        return response.text();
-      }).then(function (html) {
-      
-        // Convert the HTML string into a document object
-        let parser = new DOMParser();
-        let doc = parser.parseFromString(html, 'text/html');
-      
-        let cart = doc.querySelector('.cart .items');
 
-        let item = document.createElement("div");
-        item.classList.add("item");
-        item.innerHTML = 
-        `
-            <div class="image"><img src="${img.src}" alt=""></div>
-            <div class="item-info">
-                <div class="title">${title.textContent}</div>
-                <div class="author">${author.textContent}</div>
-            </div>
-            <div class="price-info">
-                <div class="price">${price.textContent}</div>
-                <div class="delivery">Dostawa od 9,99 zł</div>
-            </div>
-            <div class="quantity">
-                <div class="minus">-</div>
-                <div class="number">1</div>
-                <div class="plus">+</div>
-            </div>
-            <div class="buttons">
-                <button><i class="fa-regular fa-heart"></i></button>
-                <button><i class="fa-regular fa-trash-can"></i></button>
-            </div>
-        `
+      let cart = document.querySelector('.cart .items');
 
-      console.log(cart)
-      cart.appendChild(item);
-      
-      }).catch(function (err) {
-        // There was an error
-        console.warn('Something went wrong.', err);
-      });
-    })
+      let item = document.createElement("div");
+      item.classList.add("item");
+      item.innerHTML = 
+      `
+          <div class="image"><img src="${img.src}" alt=""></div>
+          <div class="item-info">
+              <div class="title">${title.textContent}</div>
+              <div class="author">${author.textContent}</div>
+          </div>
+          <div class="price-info">
+              <div class="price">${price.textContent}</div>
+              <div class="delivery">Dostawa od 9,99 zł</div>
+          </div>
+          <div class="quantity">
+              <div class="minus">-</div>
+              <div class="number">1</div>
+              <div class="plus">+</div>
+          </div>
+          <div class="buttons">
+              <button><i class="fa-regular fa-heart"></i></button>
+              <button><i class="fa-regular fa-trash-can"></i></button>
+          </div>
+      `
+
+    console.log(cart)
+    cart.appendChild(item);
+    document.querySelector(".cart").classList.add("active");
 })
+})}
+
+
+// Rating system
+function rating() {
+  let rate = document.querySelectorAll("#recommended .rating");
+  rate.forEach(rt => {
+    let nr = rt.innerText;
+    let icon = '<i class="fa-solid fa-star"></i>';
+    let result = icon.repeat(nr);
+    rt.innerHTML = result;
+  })
 }
+
+
+// isSale function
+function isSale() {
+  let sale = document.querySelectorAll(".sale");
+  sale.forEach(pr => {
+    if (pr.innerText === "") {
+      pr.style.display = "none";
+    }
+  }) 
+}
+
+
 
 // Displaying recommended books from a JSON file
 fetch("json/recommended.json").then(function(response){
@@ -81,26 +92,11 @@ fetch("json/recommended.json").then(function(response){
     book.innerHTML = out;
 
     addCartBtn()
-
-    // Rating system
-    let rate = document.querySelectorAll("#recommended .rating");
-    rate.forEach(rt => {
-      let nr = rt.innerText;
-      let icon = '<i class="fa-solid fa-star"></i>';
-      let result = icon.repeat(nr);
-      rt.innerHTML = result;
-    })
-
-    // Checking whether the product is on sale
-    let sale = document.querySelectorAll(".sale");
-    sale.forEach(pr => {
-      if (pr.innerText === "") {
-        pr.style.display = "none";
-      }
-    }) 
-  
+    rating();
+    isSale();
   }
 });
+
 
 
 
@@ -129,23 +125,8 @@ fetch("json/news.json").then(function(response){
 
     book.innerHTML = out;
 
-    // Rating system
-    let rate = document.querySelectorAll("#news .rating");
-    rate.forEach(rt => {
-      let nr = rt.innerText;
-      let icon = '<i class="fa-solid fa-star"></i>';
-      let result = icon.repeat(nr);
-      rt.innerHTML = result;
-    })
-
-    // Checking whether the product is on sale
-    let sale = document.querySelectorAll(".sale");
-    sale.forEach(pr => {
-      if (pr.innerText === "") {
-        pr.style.display = "none";
-      }
-    }) 
-
+    rating();
+    isSale();
 	}
 });
 
@@ -176,19 +157,18 @@ fetch("json/sale.json").then(function(response){
 
     book.innerHTML = out;
 
-    // Rating system
-    let rate = document.querySelectorAll("#sale .rating");
-    rate.forEach(rt => {
-      let nr = rt.innerText;
-      let icon = '<i class="fa-solid fa-star"></i>';
-      let result = icon.repeat(nr);
-      rt.innerHTML = result;
-    })
-
+    rating();
+    isSale();
 	}
 });
 
 
+// Cart view 
+const cartLinkBtn = document.querySelector(".cart-btn");
+cartLinkBtn.addEventListener("click", () => {
+  let cart = document.querySelector('.cart');
+  cart.classList.toggle("active");
+})
 
 
 // About Us - Swiper
