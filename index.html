@@ -34,7 +34,7 @@
         <div class="account-menu">
             <p>Konto</p>
             <a href="login.html">Zaloguj się</a>
-            <a href="favs.html">Ulubione</a>
+            <a class="favs-btn">Ulubione</a>
             <a class="cart-btn">Koszyk</a> 
         </div>
     </header>
@@ -61,7 +61,7 @@
             </div>
             <div class="account-menu">
                 <a href="login.html">Zaloguj się</a>
-                <a href="favs.html">Ulubione</a>
+                <a class="favs-btn">Ulubione</a>
                 <a class="cart-btn">Koszyk</a> 
             </div>
         </nav>
@@ -84,7 +84,7 @@
             <div class="cart-info">
                 <div class="price row">
                     <h2>Total price</h2>
-                    <p>24,90 PLN</p>
+                    <p class="total-price">24,90 PLN</p>
                 </div>
                 <div class="delivery-price row">
                     <h2>Delivery from</h2>
@@ -93,7 +93,7 @@
                 <hr>
                 <div class="total-price row">
                     <h2>Price including delivery</h2>
-                    <p class="total-price-heading">32,78 PLN</p>
+                    <p class="total-price-delivery">32,78 PLN</p>
                 </div>
                 <div class="buttons">
                     <button class="btn-1">Delivery and payment</button><br>
@@ -104,6 +104,22 @@
                     <h3>Do you have a discount code?</h3>
                     <input type="text" placeholder="Wpisz kod rabatowy"><button class="btn-3">Active code</button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Favourites section -->
+    <div class="cart favs">
+        <div class="cart-heading">
+            <button class="close-favs"><i class="fa-solid fa-arrow-left-long"></i></button>
+            <h1>Your Favorites list <span class="favs-quantity"></span></h1>
+            <div class="clear-favs"><i class="fa-solid fa-trash"></i> Clear all favorites</div>
+        </div>
+
+        <!-- Wrapper -->
+        <div class="wrapper">
+            <!-- All items -->
+            <div class="items">
             </div>
         </div>
     </div>

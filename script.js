@@ -15,7 +15,7 @@ const addCartBtn = (section) => {
       item.classList.add("item");
       item.innerHTML = 
       `
-          <div class="image"><img src="${img.src}" alt=""></div>
+          <div class="image"><img src="${img.src}" alt="${img.src}"></div>
           <div class="item-info">
               <div class="title">${title.textContent}</div>
               <div class="author">${author.textContent}</div>
@@ -50,10 +50,74 @@ const addCartBtn = (section) => {
     itemQuantitySystem();
 
     // Clear all cart
-    clearAllCart();
+    clearAllCart(".clear-cart", ".cart .items .item");
+
+    // Checkout calculation
+
 })
 })}
 
+// Add to cart function
+const addToFavs = (section) => {
+  let favsBtn = document.querySelectorAll(section);
+  let favsQuantityNr = 0;
+  favsBtn.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const img = btn.parentElement.parentElement.children[0].children[1];
+      const title = btn.parentElement.parentElement.children[1];
+      const author = btn.parentElement.parentElement.children[2];
+      const price = btn.parentElement.parentElement.children[3];
+
+      let favs = document.querySelector('.cart.favs .items');
+
+      let item = document.createElement("div");
+      item.classList.add("item");
+      item.innerHTML = 
+      `
+      <div class="image"><img src="${img.src}" alt="${img.src}"></div>
+      <div class="item-info">
+          <div class="title">${title.textContent}</div>
+          <div class="author">${author.textContent}</div>
+      </div>
+      <div class="price-info">
+          <div class="price">${price.textContent}</div>
+          <div class="delivery">Dostawa od 9,99 zł</div>
+      </div>
+      <div class="buttons">
+          <button><i class="fa-solid fa-cart-plus"></i></button>
+          <button class="rm-item"><i class="fa-regular fa-trash-can"></i></button>
+      </div>
+      `
+
+    favs.appendChild(item);
+    btn.style.background = "#fe5a5a";
+    alert("Dodano ten produkt do ulubionych");
+
+    // Changing cart quantity
+    let favsQuantitySpan = document.querySelector(".favs-quantity");
+    favsQuantityNr++;
+    favsQuantitySpan.innerHTML = "(" + favsQuantityNr + ")";
+
+    // Removing item from cart
+    removeCartItem();
+
+    // Changing item's quantity
+    itemQuantitySystem();
+
+    // Clear all cart
+    clearAllCart(".clear-favs", ".cart.favs .items .item");
+})
+})}
+
+const checkoutCalculation = () => {
+  const checkout = document.querySelector(".cart-info");
+  const totalPrice = document.querySelector(".total-price");
+  const totalPriceDelivery = document.querySelector(".total-price-delivery");
+
+  
+}
+
+// Removing item from cart
 const removeCartItem = () => {
   let removeCartItemBtn = document.querySelectorAll(".cart .rm-item");
   removeCartItemBtn.forEach(e => {
@@ -109,10 +173,11 @@ function isSale() {
   }) 
 }
 
-const clearAllCart = () => {
-  const clearAllCartBtn = document.querySelector(".clear-cart");
+// Clearing all items from cart
+const clearAllCart = (button, section) => {
+  const clearAllCartBtn = document.querySelector(button);
   clearAllCartBtn.addEventListener("click", () => {
-    let items = document.querySelectorAll(".cart .items .item");
+    let items = document.querySelectorAll(section);
     items.forEach((item) => {
       item.remove();
     })
@@ -134,7 +199,7 @@ fetch("json/recommended.json").then(function(response){
               <div class="image">
                   <div class="sale">${product.sale}</div>
                   <img src="${product.img}" alt="${product.author}/${product.title}">
-                  <div class="fav-btn"><i class="fa-solid fa-heart-circle-plus"></i></div>
+                  <div class="add-favs-btn"><i class="fa-solid fa-heart-circle-plus"></i></div>
               </div>
               <div class="title">${product.title}</div>
               <div class="author">${product.author}</div>
@@ -146,6 +211,7 @@ fetch("json/recommended.json").then(function(response){
 
     book.innerHTML = out;
 
+    addToFavs("#recommended .add-favs-btn");
     addCartBtn("#recommended .add-cart-btn");
     ratingSystem("#recommended .rating");
     isSale();
@@ -168,7 +234,7 @@ fetch("json/news.json").then(function(response){
               <div class="image">
                   <div class="sale">${product.sale}</div>
                   <img src="${product.img}" alt="${product.author}/${product.title}">
-                  <div class="fav-btn"><i class="fa-solid fa-heart-circle-plus"></i></div>
+                  <div class="add-favs-btn"><i class="fa-solid fa-heart-circle-plus"></i></div>
               </div>
               <div class="title">${product.title}</div>
                 <div class="author">${product.author}</div>
@@ -180,6 +246,7 @@ fetch("json/news.json").then(function(response){
 
     book.innerHTML = out;
 
+    addToFavs("#news .add-favs-btn");
     addCartBtn("#news .add-cart-btn");
     ratingSystem("#news .rating");
     isSale();
@@ -201,7 +268,7 @@ fetch("json/sale.json").then(function(response){
               <div class="image">
                   <div class="sale">${product.sale}</div>
                   <img src="${product.img}" alt="${product.author}/${product.title}">
-                  <div class="fav-btn"><i class="fa-solid fa-heart-circle-plus"></i></div>
+                  <div class="add-favs-btn"><i class="fa-solid fa-heart-circle-plus"></i></div>
               </div>
               <div class="title">${product.title}</div>
                 <div class="author">${product.author}</div>
@@ -213,6 +280,7 @@ fetch("json/sale.json").then(function(response){
 
     book.innerHTML = out;
 
+    addToFavs("#sale .add-favs-btn");
     addCartBtn("#sale .add-cart-btn");
     ratingSystem("#sale .rating");
     isSale();
@@ -234,6 +302,22 @@ const closeCartBtn = document.querySelector(".close-cart");
 closeCartBtn.addEventListener("click", () => {
   let cart = document.querySelector('.cart');
   cart.classList.remove("active");
+})
+
+// Viewing favorites list
+const favsLinkBtn = document.querySelectorAll(".favs-btn");
+favsLinkBtn.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    let favs = document.querySelector('.cart.favs');
+    favs.classList.toggle("active");
+  })
+})
+
+// Closing favorites list
+const closeFavsBtn = document.querySelector(".close-favs");
+closeFavsBtn.addEventListener("click", () => {
+  let favs = document.querySelector('.cart.favs');
+  favs.classList.remove("active");
 })
 
 
