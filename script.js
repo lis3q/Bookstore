@@ -1,6 +1,7 @@
 // Add to cart function
-function addCartBtn() {
-  let cartBtn = document.querySelectorAll(".add-cart-btn");
+const addCartBtn = (section) => {
+  let cartBtn = document.querySelectorAll(section);
+  let cartQuantityNr = 0;
   cartBtn.forEach(btn => {
     btn.addEventListener("click", () => {
       const img = btn.parentElement.parentElement.children[0].children[1];
@@ -29,29 +30,74 @@ function addCartBtn() {
               <div class="plus">+</div>
           </div>
           <div class="buttons">
-              <button><i class="fa-regular fa-heart"></i></button>
-              <button><i class="fa-regular fa-trash-can"></i></button>
+              <button class="add-fav-btn"><i class="fa-regular fa-heart"></i></button>
+              <button class="rm-item"><i class="fa-regular fa-trash-can"></i></button>
           </div>
       `
 
-    console.log(cart)
     cart.appendChild(item);
-    document.querySelector(".cart").classList.add("active");
+    alert("Dodano ten produkt do koszyka");
+
+    // Changing cart quantity
+    let cartQuantitySpan = document.querySelector(".cart-quantity");
+    cartQuantityNr++;
+    cartQuantitySpan.innerHTML = "(" + cartQuantityNr + ")";
+
+    // Removing item from cart
+    removeCartItem();
+
+    // Changing item's quantity
+    itemQuantitySystem();
+
+    // Clear all cart
+    clearAllCart();
 })
 })}
 
+const removeCartItem = () => {
+  let removeCartItemBtn = document.querySelectorAll(".cart .rm-item");
+  removeCartItemBtn.forEach(e => {
+    e.addEventListener("click", () => {
+      e.parentElement.parentElement.remove();
+    })
+  })
+}
+
+// Quantity system
+const itemQuantitySystem = () => {
+  let minus = document.querySelectorAll(".quantity .minus");
+  let plus = document.querySelectorAll(".quantity .plus");
+  
+  plus.forEach(e => {
+    let quantity = 1;
+    e.addEventListener("click", () => {
+      let number = e.previousElementSibling;
+      quantity++;
+      number.innerHTML = quantity;
+    })
+  })
+  
+  // minus.forEach(e => {
+  //   e.addEventListener("click", () => {
+  //     let quantity = e.nextElementSibling.innerText;
+  //     let number = e.nextElementSibling;
+  //     quantity--;
+  //     number.innerHTML = quantity;
+  //   })
+  // })
+}
 
 // Rating system
-function rating() {
-  let rate = document.querySelectorAll("#recommended .rating");
+const ratingSystem = (section) => {
+  let rate = document.querySelectorAll(section);
   rate.forEach(rt => {
     let nr = rt.innerText;
     let icon = '<i class="fa-solid fa-star"></i>';
     let result = icon.repeat(nr);
     rt.innerHTML = result;
   })
+  
 }
-
 
 // isSale function
 function isSale() {
@@ -63,6 +109,15 @@ function isSale() {
   }) 
 }
 
+const clearAllCart = () => {
+  const clearAllCartBtn = document.querySelector(".clear-cart");
+  clearAllCartBtn.addEventListener("click", () => {
+    let items = document.querySelectorAll(".cart .items .item");
+    items.forEach((item) => {
+      item.remove();
+    })
+  })
+}
 
 
 // Displaying recommended books from a JSON file
@@ -91,8 +146,8 @@ fetch("json/recommended.json").then(function(response){
 
     book.innerHTML = out;
 
-    addCartBtn()
-    rating();
+    addCartBtn("#recommended .add-cart-btn");
+    ratingSystem("#recommended .rating");
     isSale();
   }
 });
@@ -119,13 +174,14 @@ fetch("json/news.json").then(function(response){
                 <div class="author">${product.author}</div>
               <div class="price">${product.price} <span class="discount">${product.discount}</span></div>
               <div class="rating">${product.rating}</div>
-              <div class="btn"><button><i class="fa-solid fa-cart-plus"></i> Dodaj do koszyka</button></div>
+              <div class="btn"><button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Dodaj do koszyka</button></div>
           </div>
 		`;
 
     book.innerHTML = out;
 
-    rating();
+    addCartBtn("#news .add-cart-btn");
+    ratingSystem("#news .rating");
     isSale();
 	}
 });
@@ -151,24 +207,35 @@ fetch("json/sale.json").then(function(response){
                 <div class="author">${product.author}</div>
               <div class="price">${product.price} <span class="discount">${product.discount}</span></div>
               <div class="rating">${product.rating}</div>
-              <div class="btn"><button><i class="fa-solid fa-cart-plus"></i> Dodaj do koszyka</button></div>
+              <div class="btn"><button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Dodaj do koszyka</button></div>
           </div>
 		`;
 
     book.innerHTML = out;
 
-    rating();
+    addCartBtn("#sale .add-cart-btn");
+    ratingSystem("#sale .rating");
     isSale();
 	}
 });
 
 
-// Cart view 
-const cartLinkBtn = document.querySelector(".cart-btn");
-cartLinkBtn.addEventListener("click", () => {
-  let cart = document.querySelector('.cart');
-  cart.classList.toggle("active");
+// Viewing shopping cart
+const cartLinkBtn = document.querySelectorAll(".cart-btn");
+cartLinkBtn.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    let cart = document.querySelector('.cart');
+    cart.classList.toggle("active");
+  })
 })
+
+// Closing shopping cart
+const closeCartBtn = document.querySelector(".close-cart");
+closeCartBtn.addEventListener("click", () => {
+  let cart = document.querySelector('.cart');
+  cart.classList.remove("active");
+})
+
 
 
 // About Us - Swiper
