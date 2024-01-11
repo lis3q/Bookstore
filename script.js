@@ -7,7 +7,8 @@ const addCartBtn = (section) => {
       const img = btn.parentElement.parentElement.children[0].children[1];
       const title = btn.parentElement.parentElement.children[1];
       const author = btn.parentElement.parentElement.children[2];
-      const price = btn.parentElement.parentElement.children[3];
+      const price = btn.parentElement.parentElement.children[3].children[0];
+      const discount = btn.parentElement.parentElement.children[3].children[1];
 
       let cart = document.querySelector('.cart .items');
 
@@ -22,6 +23,7 @@ const addCartBtn = (section) => {
           </div>
           <div class="price-info">
               <div class="price">${price.textContent}</div>
+              <div class="discount">${discount.textContent}</div>
               <div class="delivery">Dostawa od 9,99 zł</div>
           </div>
           <div class="quantity">
@@ -46,18 +48,19 @@ const addCartBtn = (section) => {
     // Removing item from cart
     removeCartItem();
 
-    // Changing item's quantity
-    itemQuantitySystem();
-
     // Clear all cart
     clearAllCart(".clear-cart", ".cart .items .item");
 
+    // Changing item's quantity
+    itemQuantitySystem();
+
     // Checkout calculation
+    checkoutCalculation(price);
 
 })
 })}
 
-// Add to cart function
+// Add to favs function
 const addToFavs = (section) => {
   let favsBtn = document.querySelectorAll(section);
   let favsQuantityNr = 0;
@@ -91,6 +94,7 @@ const addToFavs = (section) => {
 
     favs.appendChild(item);
     btn.style.background = "#fe5a5a";
+    btn.style.display = "block";
     alert("Dodano ten produkt do ulubionych");
 
     // Changing cart quantity
@@ -109,12 +113,17 @@ const addToFavs = (section) => {
 })
 })}
 
-const checkoutCalculation = () => {
-  const checkout = document.querySelector(".cart-info");
-  const totalPrice = document.querySelector(".total-price");
-  const totalPriceDelivery = document.querySelector(".total-price-delivery");
-
-  
+let totalPrice = 0;
+let totalPriceDelivery = totalPrice + 9.99;
+// Checkout calculation function
+const checkoutCalculation = (priceCalc) => {
+  const totalPriceDiv = document.querySelector(".total-price");
+  const totalPriceDeliveryDiv = document.querySelector(".total-price-delivery");
+  priceCalc = parseFloat(priceCalc.textContent);
+  totalPrice += priceCalc;
+  totalPriceDelivery += priceCalc;
+  totalPriceDiv.innerHTML = totalPrice.toFixed(2) + " PLN";
+  totalPriceDeliveryDiv.innerHTML = totalPriceDelivery.toFixed(2) + " PLN";
 }
 
 // Removing item from cart
@@ -141,14 +150,13 @@ const itemQuantitySystem = () => {
     })
   })
   
-  // minus.forEach(e => {
-  //   e.addEventListener("click", () => {
-  //     let quantity = e.nextElementSibling.innerText;
-  //     let number = e.nextElementSibling;
-  //     quantity--;
-  //     number.innerHTML = quantity;
-  //   })
-  // })
+  minus.forEach(e => {
+    e.addEventListener("click", () => {
+      let number = e.nextElementSibling;
+      quantity--;
+      number.innerHTML = quantity;
+    })
+  })
 }
 
 // Rating system
@@ -203,7 +211,10 @@ fetch("json/recommended.json").then(function(response){
               </div>
               <div class="title">${product.title}</div>
               <div class="author">${product.author}</div>
-              <div class="price">${product.price} <span class="discount">${product.discount}</span></div>
+              <div class="price-info">
+                <div class="price">${product.price}</div>
+                <div class="discount">${product.discount}</div>
+              </div>
               <div class="rating">${product.rating}</div>
               <div class="btn"><button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Dodaj do koszyka</button></div>
           </div>
@@ -237,8 +248,11 @@ fetch("json/news.json").then(function(response){
                   <div class="add-favs-btn"><i class="fa-solid fa-heart-circle-plus"></i></div>
               </div>
               <div class="title">${product.title}</div>
-                <div class="author">${product.author}</div>
-              <div class="price">${product.price} <span class="discount">${product.discount}</span></div>
+              <div class="author">${product.author}</div>
+              <div class="price-info">
+                <div class="price">${product.price}</div>
+                <div class="discount">${product.discount}</div>
+              </div>
               <div class="rating">${product.rating}</div>
               <div class="btn"><button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Dodaj do koszyka</button></div>
           </div>
@@ -271,8 +285,11 @@ fetch("json/sale.json").then(function(response){
                   <div class="add-favs-btn"><i class="fa-solid fa-heart-circle-plus"></i></div>
               </div>
               <div class="title">${product.title}</div>
-                <div class="author">${product.author}</div>
-              <div class="price">${product.price} <span class="discount">${product.discount}</span></div>
+              <div class="author">${product.author}</div>
+              <div class="price-info">
+                  <div class="price">${product.price}</div>
+                  <div class="discount">${product.discount}</div>
+              </div>
               <div class="rating">${product.rating}</div>
               <div class="btn"><button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Dodaj do koszyka</button></div>
           </div>
@@ -319,45 +336,6 @@ closeFavsBtn.addEventListener("click", () => {
   let favs = document.querySelector('.cart.favs');
   favs.classList.remove("active");
 })
-
-
-
-// About Us - Swiper
-const about = new Swiper('.reviews-swiper', {
-  autoplay: {
-    delay: 5000,
-  },
-  slidesPerView: 3,
-  slidesPerGroup: 1,
-  loop: true,
-  grabCursor: 'true',
-  spaceBetween: 30,
-  fade: 'true',
-  centerSlide: 'true',
-  direction: 'horizontal',
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // Pagination
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-
-  // Breakpoints (responsibility)
-  breakpoints: {
-    600: {
-      slidesPerView: 3,
-    },
-    0: {
-      slidesPerView: 1,
-    }
-  }
-});
 
 
 // Books - Swiper

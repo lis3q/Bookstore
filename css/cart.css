@@ -126,13 +126,24 @@
 }
 .item .price-info .price {
     font-weight: 700;
-    font-size: 1.1em;
+    font-size: 1.2em;
     color: #FE5A5A;
+    float: left;
+}
+.item .price-info .discount {
+    font-size: 0.9em;
+    color: #949494;
+    font-weight: 500;
+    text-decoration: line-through;
+    line-height: 25px;
+    margin-left: 7px;
+    float: left;
 }
 .item .price-info .delivery {
     font-size: 0.8em;
     margin-top: 2px;
     color: #363636;
+    display: block;
 }
 /* Quantity */
 .item .quantity {

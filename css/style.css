@@ -270,6 +270,9 @@ header.mobile .account-menu a {
     text-wrap: wrap;
     overflow: auto;
 }
+.content .box:hover .image .add-favs-btn {
+    display: block;
+}
 .content .box .image {
     height: 360px;
     width: 100%;
@@ -300,6 +303,7 @@ header.mobile .account-menu a {
     bottom: 4%;
     cursor: pointer;
     transition: .2s ease;
+    display: none;
 }
 .content .box .image .add-favs-btn:hover {
     background: #FE5A5A;
@@ -330,23 +334,27 @@ header.mobile .account-menu a {
 .content .box .title:hover {
     color: #FE5A5A;
 }
-.content .box .price {
+.content .box .price-info {
+    height: 60px;
+}
+.content .box .price-info .price {
     margin: 16px 0 5px 0;
     font-size: 1.6em;
     font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 10px;
     color: #FE5A5A;
+    float: left;
 }
-.content .box .price .discount {
-    font-size: 0.7em;
+.content .box .price-info .discount {
+    font-size: 1.1em;
     color: #949494;
     font-weight: 500;
     text-decoration: line-through;
+    float: left;
+    line-height: 63px;
+    margin-left: 10px;
 }
 .content .box .rating i {
-    margin: 5px 2px 10px 2px;
+    margin: 0px 2px 10px 2px;
     color: #FFC700;
 }
 .content .box .btn {

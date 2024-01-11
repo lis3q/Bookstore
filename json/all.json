@@ -6,7 +6,8 @@
         "title": "Metro 2033",
         "price": "39.99 zł",
         "discount": "49.99 zł",
-        "sale": "-20%"
+        "sale": "-20%",
+        "rating": 5
     },
 
     {
@@ -16,7 +17,8 @@
         "title": "Więzień labiryntu",
         "price": "22.99 zł",
         "discount": "",
-        "sale": ""
+        "sale": "",
+        "rating": 5
     },
 
     {
@@ -26,8 +28,8 @@
         "title": "Igrzyska śmierci",
         "price": "35.99 zł",
         "discount": "",
-        "rating": 5,
-        "sale": ""
+        "sale": "",
+        "rating": 5
     },
 
     {
@@ -37,7 +39,8 @@
         "title": "Outsider",
         "price": "24.99 zł",
         "discount": "",
-        "sale": ""
+        "sale": "",
+        "rating": 5
     },
 
     {
@@ -47,7 +50,8 @@
         "title": "Znachor",
         "price": "23.20 zł",
         "discount": "33.20 zł",
-        "sale": "-30%"
+        "sale": "-30%",
+        "rating": 5
     },
 
     {
@@ -57,7 +61,8 @@
         "title": "Holly",
         "price": "28.97 zł",
         "discount": "",
-        "sale": ""
+        "sale": "",
+        "rating": 5
     },
 
     {
@@ -67,7 +72,8 @@
         "title": "Diuna",
         "price": "34.99 zł",
         "discount": "",
-        "sale": ""
+        "sale": "",
+        "rating": 5
     },
 
     {
@@ -77,7 +83,8 @@
         "title": "Zrost",
         "price": "29.77 zł",
         "discount": "39.77 zł",
-        "sale": "-25%"
+        "sale": "-25%",
+        "rating": 5
     },
 
     {
@@ -87,7 +94,8 @@
         "title": "W szponach",
         "price": "26.35 zł",
         "discount": "",
-        "sale": ""
+        "sale": "",
+        "rating": 5
     },
 
     {
@@ -97,7 +105,8 @@
         "title": "Zarzut",
         "price": "26.75 zł",
         "discount": "",
-        "sale": ""
+        "sale": "",
+        "rating": 5
     },
 
     {
@@ -107,7 +116,8 @@
         "title": "Więzień labiryntu: lek na śmierć",
         "price": "38,90 zł",
         "discount": "",
-        "sale": ""
+        "sale": "",
+        "rating": 5
     },
 
     {
@@ -117,7 +127,8 @@
         "title": "Venom",
         "price": "32,43 zł",
         "discount": "",
-        "sale": ""
+        "sale": "",
+        "rating": 5
     },
 
     {
@@ -127,7 +138,8 @@
         "title": "Hellish Heat",
         "price": "29,18 zł",
         "discount": "",
-        "sale": ""
+        "sale": "",
+        "rating": 5
     },
 
     {
@@ -137,7 +149,8 @@
         "title": "Fala",
         "price": "28,26 zł",
         "discount": "",
-        "sale": ""
+        "sale": "",
+        "rating": 5
     },
 
     {
@@ -147,7 +160,8 @@
         "title": "Look at Me Princess",
         "price": "27,23 zł",
         "discount": "",
-        "sale": ""
+        "sale": "",
+        "rating": 5
     },
 
     {
@@ -157,7 +171,8 @@
         "title": "Red Lies",
         "price": "32,43 zł",
         "discount": "",
-        "sale": ""
+        "sale": "",
+        "rating": 5
     },
 
     {
@@ -167,7 +182,8 @@
         "title": "Start Over",
         "price": "27,88 zł",
         "discount": "",
-        "sale": ""
+        "sale": "",
+        "rating": 5
     },
 
     {
@@ -177,7 +193,8 @@
         "title": "Vincent",
         "price": "27,88 zł",
         "discount": "",
-        "sale": ""
+        "sale": "",
+        "rating": 5
     },
 
     {
@@ -187,7 +204,8 @@
         "title": "Royal",
         "price": "27,23 zł",
         "discount": "",
-        "sale": ""
+        "sale": "",
+        "rating": 5
     },
 
     {
@@ -197,7 +215,8 @@
         "title": "Sensitive Heart",
         "price": "32,43 zł",
         "discount": "",
-        "sale": ""
+        "sale": "",
+        "rating": 5
     },
 
     {
@@ -207,7 +226,8 @@
         "title": "Michael",
         "price": "29,18 zł",
         "discount": "",
-        "sale": ""
+        "sale": "",
+        "rating": 5
     },
 
     {
@@ -217,7 +237,8 @@
         "title": "Więzień labiryntu: lek na śmierć",
         "price": "38,90 zł",
         "discount": "",
-        "sale": ""
+        "sale": "",
+        "rating": 5
     },
 
     {
@@ -227,7 +248,8 @@
         "title": "Sekret pacjentki",
         "price": "26,75 zł",
         "discount": "31,75 zł",
-        "sale": "-40%"
+        "sale": "-40%",
+        "rating": 5
     },
 
     {
@@ -237,7 +259,8 @@
         "title": "Kabalista",
         "price": "24,70 zł",
         "discount": "31,70 zł",
-        "sale": "-30%"
+        "sale": "-30%",
+        "rating": 5
     },
 
     {
@@ -247,7 +270,8 @@
         "title": "Zrost",
         "price": "29.77 zł",
         "discount": "39.77 zł",
-        "sale": "-25%"
+        "sale": "-25%",
+        "rating": 5
     },
 
     {
@@ -257,7 +281,8 @@
         "title": "Znachor",
         "price": "23.20 zł",
         "discount": "33.20 zł",
-        "sale": "-30%"
+        "sale": "-30%",
+        "rating": 5
     },
 
     {
@@ -267,7 +292,8 @@
         "title": "Metro 2033",
         "price": "39.99 zł",
         "discount": "49.99 zł",
-        "sale": "-20%"
+        "sale": "-20%",
+        "rating": 5
     },
 
     {
@@ -277,7 +303,8 @@
         "title": "Cyberpunk 2077. Bez przypadku",
         "price": "32,47 zł",
         "discount": "39,47 zł",
-        "sale": "-15%"
+        "sale": "-15%",
+        "rating": 5
     },
 
     {
@@ -287,7 +314,8 @@
         "title": "Hyperion",
         "price": "37.85 zł",
         "discount": "43,85 zł",
-        "sale": "-20%"
+        "sale": "-20%",
+        "rating": 5
     },
 
     {
@@ -297,7 +325,8 @@
         "title": "Elon Musk",
         "price": "49,83 zł",
         "discount": "56,83 zł",
-        "sale": "-30%"
+        "sale": "-30%",
+        "rating": 5
     },
 
     {
@@ -307,7 +336,8 @@
         "title": "Ostatnie życzenie. Wiedźmin. Tom 1",
         "price": "29,93 zł",
         "discount": "37,93 zł",
-        "sale": "-20%"
+        "sale": "-20%",
+        "rating": 5
     },
 
     {
@@ -317,7 +347,8 @@
         "title": "Baśniowa opowieść",
         "price": "44,48 zł",
         "discount": "65.48 zł",
-        "sale": "-40%"
+        "sale": "-40%",
+        "rating": 5
     },
 
     {
@@ -327,6 +358,7 @@
         "title": "Star Wars. Cień Sithów",
         "price": "32,67 zł",
         "discount": "38,67 zł",
-        "sale": "-10%"
+        "sale": "-10%",
+        "rating": 5
     }
 ]
