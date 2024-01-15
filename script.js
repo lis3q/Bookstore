@@ -138,25 +138,23 @@ const removeCartItem = () => {
 
 // Quantity system
 const itemQuantitySystem = () => {
-  let minus = document.querySelectorAll(".quantity .minus");
-  let plus = document.querySelectorAll(".quantity .plus");
+  for (const systemElement of document.querySelectorAll(".quantity")) {
+    const number = systemElement.querySelector(".number");
+    const minus = systemElement.querySelector(".minus");
+    const plus = systemElement.querySelector(".plus");
+    
+    let quantity = parseInt(number.textContent);
   
-  plus.forEach(e => {
-    let quantity = 1;
-    e.addEventListener("click", () => {
-      let number = e.previousElementSibling;
+    plus.addEventListener("click", () => {
       quantity++;
-      number.innerHTML = quantity;
-    })
-  })
+      number.textContent = quantity;
+    });
   
-  minus.forEach(e => {
-    e.addEventListener("click", () => {
-      let number = e.nextElementSibling;
+    minus.addEventListener("click", () => {
       quantity--;
-      number.innerHTML = quantity;
-    })
-  })
+      number.textContent = quantity;
+    });
+  }
 }
 
 // Rating system
@@ -192,117 +190,46 @@ const clearAllCart = (button, section) => {
   })
 }
 
-
-// Displaying recommended books from a JSON file
-fetch("json/recommended.json").then(function(response){
-	return response.json();
-})
-.then(function(products){
-	let book = document.querySelector("#recommended .swiper-wrapper");
-	let out = "";
-
-	for(let product of products){
-		out += `
-            <div class="box swiper-slide">
-              <div class="image">
-                  <div class="sale">${product.sale}</div>
-                  <img src="${product.img}" alt="${product.author}/${product.title}">
-                  <div class="add-favs-btn"><i class="fa-solid fa-heart-circle-plus"></i></div>
-              </div>
-              <div class="title">${product.title}</div>
-              <div class="author">${product.author}</div>
-              <div class="price-info">
-                <div class="price">${product.price}</div>
-                <div class="discount">${product.discount}</div>
-              </div>
-              <div class="rating">${product.rating}</div>
-              <div class="btn"><button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Dodaj do koszyka</button></div>
-          </div>
-		`;
-
-    book.innerHTML = out;
-
-    addToFavs("#recommended .add-favs-btn");
-    addCartBtn("#recommended .add-cart-btn");
-    ratingSystem("#recommended .rating");
-    isSale();
-  }
-});
-
-
-
-
-// Displaying new books from a JSON file
-fetch("json/news.json").then(function(response){
-	return response.json();
-})
-.then(function(products){
-	let book = document.querySelector("#news .swiper-wrapper");
-	let out = "";
-	for(let product of products){
-		out += `
-            <div class="swiper-slide box">
-              <div class="image">
-                  <div class="sale">${product.sale}</div>
-                  <img src="${product.img}" alt="${product.author}/${product.title}">
-                  <div class="add-favs-btn"><i class="fa-solid fa-heart-circle-plus"></i></div>
-              </div>
-              <div class="title">${product.title}</div>
-              <div class="author">${product.author}</div>
-              <div class="price-info">
-                <div class="price">${product.price}</div>
-                <div class="discount">${product.discount}</div>
-              </div>
-              <div class="rating">${product.rating}</div>
-              <div class="btn"><button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Dodaj do koszyka</button></div>
-          </div>
-		`;
-
-    book.innerHTML = out;
-
-    addToFavs("#news .add-favs-btn");
-    addCartBtn("#news .add-cart-btn");
-    ratingSystem("#news .rating");
-    isSale();
-	}
-});
-
-
-
-// Displaying sale books from a JSON file
-fetch("json/sale.json").then(function(response){
-	return response.json();
-})
-.then(function(products){
-	let book = document.querySelector("#sale .swiper-wrapper");
-	let out = "";
-	for(let product of products){
-		out += `
-            <div class="swiper-slide box">
-              <div class="image">
-                  <div class="sale">${product.sale}</div>
-                  <img src="${product.img}" alt="${product.author}/${product.title}">
-                  <div class="add-favs-btn"><i class="fa-solid fa-heart-circle-plus"></i></div>
-              </div>
-              <div class="title">${product.title}</div>
-              <div class="author">${product.author}</div>
-              <div class="price-info">
+// Showing books function
+function showBooks(file, section, favs, cart, rating) {
+  fetch(file).then(function(response){
+    return response.json();
+  })
+  .then(function(products){
+    let book = document.querySelector(section);
+    let out = "";
+  
+    for(let product of products){
+      out += `
+              <div class="box swiper-slide">
+                <div class="image">
+                    <div class="sale">${product.sale}</div>
+                    <img src="${product.img}" alt="${product.author}/${product.title}">
+                    <div class="add-favs-btn"><i class="fa-solid fa-heart-circle-plus"></i></div>
+                </div>
+                <div class="title">${product.title}</div>
+                <div class="author">${product.author}</div>
+                <div class="price-info">
                   <div class="price">${product.price}</div>
                   <div class="discount">${product.discount}</div>
-              </div>
-              <div class="rating">${product.rating}</div>
-              <div class="btn"><button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Dodaj do koszyka</button></div>
-          </div>
-		`;
-
-    book.innerHTML = out;
-
-    addToFavs("#sale .add-favs-btn");
-    addCartBtn("#sale .add-cart-btn");
-    ratingSystem("#sale .rating");
-    isSale();
-	}
-});
+                </div>
+                <div class="rating">${product.rating}</div>
+                <div class="btn"><button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Dodaj do koszyka</button></div>
+            </div>
+      `;
+  
+      book.innerHTML = out;
+  
+      addToFavs(favs);
+      addCartBtn(cart);
+      ratingSystem(rating);
+      isSale();
+    }
+  });
+}
+showBooks("./json/recommended.json", "#recommended .swiper-wrapper", "#recommended .add-favs-btn", "#recommended .add-cart-btn", "#recommended .rating");
+showBooks("./json/news.json", "#news .swiper-wrapper", "#news .add-favs-btn", "#news .add-cart-btn", "#news .rating");
+showBooks("./json/sale.json", "#sale .swiper-wrapper", "#sale .add-favs-btn", "#sale .add-cart-btn", "#sale .rating");
 
 
 // Viewing shopping cart
