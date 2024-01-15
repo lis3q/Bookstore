@@ -40,10 +40,13 @@ const addCartBtn = (section) => {
     cart.appendChild(item);
     alert("Dodano ten produkt do koszyka");
 
-    // Changing cart quantity
+    // Changing cart quantity in cart
     let cartQuantitySpan = document.querySelector(".cart-quantity");
+    let cartQuantitySpanHome = document.querySelector(".cartQuantity");
     cartQuantityNr++;
     cartQuantitySpan.innerHTML = "(" + cartQuantityNr + ")";
+    cartQuantitySpanHome.innerHTML = cartQuantityNr;
+    cartQuantitySpanHome.style.display = "block";
 
     // Removing item from cart
     removeCartItem();
@@ -151,8 +154,13 @@ const itemQuantitySystem = () => {
     });
   
     minus.addEventListener("click", () => {
-      quantity--;
-      number.textContent = quantity;
+      if (quantity < 2) {
+        quantity = 1;
+        number.textContent = quantity;
+      } else {
+        quantity--;
+        number.textContent = quantity;
+      }
     });
   }
 }

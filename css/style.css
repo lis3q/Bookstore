@@ -143,6 +143,22 @@ nav {
     padding-right: 5px;
     cursor: pointer;
     transition: .3s ease;
+    position: relative;
+}
+.account-menu a .cartQuantity {
+    height: 19px;
+    width: 20px;
+    line-height: 19px;
+    text-align: center;
+    background: #FE5A5A;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 50%;
+    font-size: 0.8em;
+    position: absolute;
+    right: -24%;
+    top: -55%;
+    display: none;
 }
 .category-menu a:last-child,
 .account-menu a:last-child {
