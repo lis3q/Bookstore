@@ -12,12 +12,6 @@ const about = new Swiper('.reviews-swiper', {
     centerSlide: 'true',
     direction: 'horizontal',
   
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
     // Pagination
     pagination: {
       el: '.swiper-pagination',

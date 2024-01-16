@@ -295,6 +295,112 @@
 }
 
 
+/* Popups */
+.cart-popup {
+    height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 120px;
+    left: 0;
+    z-index: 60;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cart-popup-wrapper {
+    background: #fff;
+    border-radius: 7px;
+    padding: 30px;
+}
+.cart-popup .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f1f6d5;
+    padding: 20px 14px;
+    border-radius: 7px;
+}
+.heading h1 {
+    font-size: 0.6em;
+    color: #222;
+}
+.heading button {
+    color: #9ead44;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+.product-box {
+    margin: 30px 0;
+    background: #fff;
+    display: flex;
+    gap: 30px;
+}
+.product-box .image img {
+    height: 260px;
+}
+.product-box .title {
+    font-size: 1.6em;
+    color: #333;
+    font-weight: 600;
+}
+.product-box .author {
+    margin-top: 6px;
+    font-weight: 400;
+    color: #8a8a8a;
+}
+.product-box .price-info {
+    margin: 18px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.price-info .price {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #FE5A5A;
+}
+.price-info .discount {
+    font-size: 1.1em;
+    color: #949494;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+.product-box .buttons {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+}
+.product-box .buttons button {
+    padding: 15px 35px;
+    border: none;
+    background: #FE5A5A;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.04em;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all .3s ease;
+}
+.product-box .buttons button:hover {
+    background: #cc5151;
+}
+.product-box .buttons button:nth-child(2) {
+    border: 2px solid #FE5A5A;
+    background: none;
+    color: #FE5A5A;
+}
+.product-box .buttons button:nth-child(2):hover {
+    color: #cc5151;
+    border: 2px solid #cc5151;
+}
+
+
 /* Responsibility */
 @media screen and (max-width: 680px) {
     body {

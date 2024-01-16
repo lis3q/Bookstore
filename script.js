@@ -38,7 +38,9 @@ const addCartBtn = (section) => {
       `
 
     cart.appendChild(item);
-    alert("Dodano ten produkt do koszyka");
+
+    // Showing popup box
+    showPopup("cart", "view-cart-btn", "cart", img.src, title, author, price, discount, ".cart");
 
     // Changing cart quantity in cart
     let cartQuantitySpan = document.querySelector(".cart-quantity");
@@ -72,7 +74,8 @@ const addToFavs = (section) => {
       const img = btn.parentElement.parentElement.children[0].children[1];
       const title = btn.parentElement.parentElement.children[1];
       const author = btn.parentElement.parentElement.children[2];
-      const price = btn.parentElement.parentElement.children[3];
+      const price = btn.parentElement.parentElement.children[3].children[0];
+      const discount = btn.parentElement.parentElement.children[3].children[1];
 
       let favs = document.querySelector('.cart.favs .items');
 
@@ -86,8 +89,9 @@ const addToFavs = (section) => {
           <div class="author">${author.textContent}</div>
       </div>
       <div class="price-info">
-          <div class="price">${price.textContent}</div>
-          <div class="delivery">Dostawa od 9,99 zł</div>
+        <div class="price">${price.textContent}</div>
+        <div class="discount">${discount.textContent}</div>
+        <div class="delivery">Dostawa od 9,99 zł</div>
       </div>
       <div class="buttons">
           <button><i class="fa-solid fa-cart-plus"></i></button>
@@ -98,7 +102,8 @@ const addToFavs = (section) => {
     favs.appendChild(item);
     btn.style.background = "#fe5a5a";
     btn.style.display = "block";
-    alert("Dodano ten produkt do ulubionych");
+    
+    showPopup("favorites", "view-cart-btn", "favorites", img.src, title, author, price, discount, ".favs");
 
     // Changing cart quantity
     let favsQuantitySpan = document.querySelector(".favs-quantity");
@@ -127,6 +132,56 @@ const checkoutCalculation = (priceCalc) => {
   totalPriceDelivery += priceCalc;
   totalPriceDiv.innerHTML = totalPrice.toFixed(2) + " PLN";
   totalPriceDeliveryDiv.innerHTML = totalPriceDelivery.toFixed(2) + " PLN";
+}
+
+const showPopup = (message, btnClass, btnContent, img, title, author, price, discount, list) => {
+// Added to cart popup message
+const cartPopup = document.createElement("div");
+cartPopup.classList.add("cart-popup");
+cartPopup.innerHTML = 
+`
+  <div class="cart-popup-wrapper">
+    <div class="heading">
+        <h1>Product added to your ${message}!</h1>
+        <button class="close-popup-btn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="product-box">
+        <div class="image"><img src="${img}" alt="${img}"></div>
+        <div class="product-info">
+            <div class="title">${title.textContent}</div>
+            <div class="author">${author.textContent}</div>
+            <div class="price-info">
+                <div class="price">${price.textContent}</div>
+                <div class="discount">${discount.textContent}</div>
+            </div>
+            <div class="buttons">
+                <button class="${btnClass}">View ${btnContent}</button>
+                <button class="continue-shopping-btn">Continue shopping</button>
+            </div>
+        </div>
+      </div>
+  </div>
+`
+
+document.body.appendChild(cartPopup);
+
+// Closing popup message
+closePopup();
+
+// Viewing cart/favorites
+const viewCartBtn = cartPopup.querySelector(".view-cart-btn");
+const shoppingCart = document.querySelector(list);
+viewCartBtn.addEventListener("click", () => {
+  shoppingCart.classList.add("active");
+})
+}
+
+const closePopup = () => {
+  const closePopupBtn = document.querySelector(".close-popup-btn");
+  const cartpopup = document.querySelector(".cart-popup");
+  closePopupBtn.addEventListener("click", () => {
+    cartpopup.remove();
+  })
 }
 
 // Removing item from cart
