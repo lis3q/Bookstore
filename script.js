@@ -1,7 +1,18 @@
+// Global variables
+let totalPrice = 0;
+let totalPriceDelivery = totalPrice + 9.99;
+let cartQuantityNr = 0;
+let favsQuantityNr = 0;
+let favsQuantitySpan = document.querySelector(".favs-quantity");
+let cartQuantitySpan = document.querySelector(".cart-quantity");
+let cartQuantitySpanHome = document.querySelector(".cartQuantity");
+const totalPriceDiv = document.querySelector(".total-price");
+const totalPriceDeliveryDiv = document.querySelector(".total-price-delivery");
+const deliveryPriceDiv = document.querySelector(".delivery-price-p");
+
 // Add to cart function
 const addCartBtn = (section) => {
   let cartBtn = document.querySelectorAll(section);
-  let cartQuantityNr = 0;
   cartBtn.forEach(btn => {
     btn.addEventListener("click", () => {
       const img = btn.parentElement.parentElement.children[0].children[1];
@@ -46,6 +57,7 @@ const addCartBtn = (section) => {
     let cartQuantitySpan = document.querySelector(".cart-quantity");
     let cartQuantitySpanHome = document.querySelector(".cartQuantity");
     cartQuantityNr++;
+    console.log(cartQuantityNr);
     cartQuantitySpan.innerHTML = "(" + cartQuantityNr + ")";
     cartQuantitySpanHome.innerHTML = cartQuantityNr;
     cartQuantitySpanHome.style.display = "block";
@@ -68,7 +80,6 @@ const addCartBtn = (section) => {
 // Add to favs function
 const addToFavs = (section) => {
   let favsBtn = document.querySelectorAll(section);
-  let favsQuantityNr = 0;
   favsBtn.forEach(btn => {
     btn.addEventListener("click", () => {
       const img = btn.parentElement.parentElement.children[0].children[1];
@@ -105,8 +116,7 @@ const addToFavs = (section) => {
     
     showPopup("favorites", "view-cart-btn", "favorites", img.src, title, author, price, discount, ".favs");
 
-    // Changing cart quantity
-    let favsQuantitySpan = document.querySelector(".favs-quantity");
+    // Changing favs quantity
     favsQuantityNr++;
     favsQuantitySpan.innerHTML = "(" + favsQuantityNr + ")";
 
@@ -121,17 +131,14 @@ const addToFavs = (section) => {
 })
 })}
 
-let totalPrice = 0;
-let totalPriceDelivery = totalPrice + 9.99;
 // Checkout calculation function
 const checkoutCalculation = (priceCalc) => {
-  const totalPriceDiv = document.querySelector(".total-price");
-  const totalPriceDeliveryDiv = document.querySelector(".total-price-delivery");
   priceCalc = parseFloat(priceCalc.textContent);
   totalPrice += priceCalc;
   totalPriceDelivery += priceCalc;
   totalPriceDiv.innerHTML = totalPrice.toFixed(2) + " PLN";
   totalPriceDeliveryDiv.innerHTML = totalPriceDelivery.toFixed(2) + " PLN";
+  deliveryPriceDiv.innerHTML = 9.99 + " PLN";
 }
 
 const showPopup = (message, btnClass, btnContent, img, title, author, price, discount, list) => {
@@ -189,6 +196,12 @@ const removeCartItem = () => {
   let removeCartItemBtn = document.querySelectorAll(".cart .rm-item");
   removeCartItemBtn.forEach(e => {
     e.addEventListener("click", () => {
+      cartQuantityNr--;
+      console.log(cartQuantityNr);
+      favsQuantityNr--;
+      cartQuantitySpan.innerHTML = "(" + cartQuantityNr + ")";
+      cartQuantitySpanHome.innerHTML = cartQuantityNr;
+      favsQuantitySpan.innerHTML = favsQuantityNr;
       e.parentElement.parentElement.remove();
     })
   })
@@ -246,6 +259,15 @@ function isSale() {
 const clearAllCart = (button, section) => {
   const clearAllCartBtn = document.querySelector(button);
   clearAllCartBtn.addEventListener("click", () => {
+    cartQuantityNr = 0;
+    favsQuantityNr = 0;
+    favsQuantitySpan.innerHTML = "";
+    cartQuantitySpan.innerHTML = "";
+    cartQuantitySpanHome.innerHTML = "";
+    cartQuantitySpanHome.style.display = "none";
+    totalPriceDiv.innerHTML = "";
+    totalPriceDeliveryDiv.innerHTML = "";
+    deliveryPriceDiv.innerHTML = "";
     let items = document.querySelectorAll(section);
     items.forEach((item) => {
       item.remove();

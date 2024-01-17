@@ -301,7 +301,7 @@
     width: 100%;
     background: rgba(0,0,0,0.7);
     position: fixed;
-    top: 120px;
+    top: 80px;
     left: 0;
     z-index: 60;
     display: flex;
@@ -311,8 +311,9 @@
 }
 .cart-popup-wrapper {
     background: #fff;
-    border-radius: 7px;
+    border-radius: 4px;
     padding: 30px;
+    min-width: 600px;
 }
 .cart-popup .heading {
     display: flex;
@@ -320,7 +321,7 @@
     justify-content: space-between;
     background: #f1f6d5;
     padding: 20px 14px;
-    border-radius: 7px;
+    border-radius: 4px;
 }
 .heading h1 {
     font-size: 0.6em;
@@ -476,5 +477,12 @@
     .cart-info .btn-1,
     .cart-info .btn-2 {
         font-size: 0.9em;
+    }
+
+    /* Popups */
+    .cart-popup-wrapper {
+        padding: 30px;
+        min-width: 90%;
+        width: 90%;
     }
 }
